@@ -1,0 +1,31 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+#mainBody {
+  width: 100%;
+}
+@font-face {
+    font-family: MDL2;
+    src: url(FullMDL2.woff) format("woff"), url(FullMDL2.ttf) format('truetype');
+    font-weight: 400;
+    font-style: normal
+}
+#header {
+  font-family: MDL2;
+  font-size: 32px;
+  padding: 10px;
+  color: #FFF;
+  background-color: #106ebe;
+}
+  #header h1 {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    font-size: 28px;
+    font-family: "Segoe UI", sans-serif;
+    font-weight: 100;
+  }
+#header::before {
+   content: "\EF91"
+}
