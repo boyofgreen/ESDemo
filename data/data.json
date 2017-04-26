@@ -9,7 +9,7 @@
             "platform" : "x86fre"
         },
         "health" : {
-            "totalUniqueInsiders" : 800000,
+            "totalUniqueInsiders" : 852672,
             "daily" : [{
                 "date" : "4/25/2017",
                 "score" : 62712,
@@ -18,7 +18,17 @@
             {
                 "date" : "4/25/2017",
                 "score" : 25123,
-                "uniqueInsiders" : 213241
+                "uniqueInsiders" : 81233
+            }, 
+            {
+                "date" : "4/26/2017",
+                "score" : 325123,
+                "uniqueInsiders" : 982121
+            }, 
+            {
+                "date" : "4/27/2017",
+                "score" : 432512,
+                "uniqueInsiders" : 10212341
             }]
         }
     }]   
