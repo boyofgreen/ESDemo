@@ -1,0 +1,25 @@
+{
+    "builds": [{
+        "build" : {
+            "id" : 0,
+            "major" : 10,
+            "minor" : 0,
+            "build" : 6001,
+            "revision" : 17521,
+            "platform" : "x86fre"
+        },
+        "health" : {
+            "totalUniqueInsiders" : 800000,
+            "daily" : [{
+                "date" : "4/25/2017",
+                "score" : 62712,
+                "uniqueInsiders" : 45312
+            }, 
+            {
+                "date" : "4/25/2017",
+                "score" : 25123,
+                "uniqueInsiders" : 213241
+            }]
+        }
+    }]   
+}
