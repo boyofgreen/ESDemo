@@ -2,16 +2,17 @@ var buildData = null;
 
 document.addEventListener("DOMContentLoaded", function(){
     //Load Windows build data
-    getBuildData();
+    //Removing this call temporarily
+    //getBuildData();
 });
 
 function getBuildData(){
     // Create XHR object
-    var xhr = new XMLHttpRequest();                         
-    xhr.addEventListener("load", transferComplete);     
-    xhr.open("GET",                                     
+    var xhr = new XMLHttpRequest();
+    xhr.addEventListener("load", transferComplete);
+    xhr.open("GET",
         "./data/data.json");
-    xhr.send(); 
+    xhr.send();
 }
 
 function transferComplete(evt){

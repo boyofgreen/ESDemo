@@ -17,15 +17,45 @@ body {
   padding: 10px;
   color: #FFF;
   background-color: #106ebe;
+  display: flex;
+  align-items: center;
 }
   #header h1 {
     display: inline-block;
     margin: 0;
     padding: 0;
-    font-size: 28px;
+    font-size: 32px;
     font-family: "Segoe UI", sans-serif;
     font-weight: 100;
+    position: relative;
+    top: -3px;
   }
-#header::before {
-   content: "\EF91"
+#mainIcon::before {
+  content: "\EF91";
+  margin-right: 15px;
+}
+
+#sidebar {
+  width: 100px;
+  background-color: #EEE;
+}
+#sidebar li {
+  list-style: none;
+  padding-left: 0;
+  padding: 10px;
+  text-align: center;
+}
+#sidebar ul {
+  padding: 0;
+  margin: 0;
+}
+#container {
+  display: flex;
+}
+#container h1 {
+  font-family: "Segoe UI", sans-serfif;
+  font-weight: 100;
+}
+#content {
+  padding: 10px;
 }
