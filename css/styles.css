@@ -19,6 +19,7 @@ body {
   background-color: #106ebe;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
   #header h1 {
     display: inline-block;
@@ -28,11 +29,17 @@ body {
     font-family: "Segoe UI", sans-serif;
     font-weight: 100;
     position: relative;
-    top: -3px;
+    top: -5px;
   }
 #mainIcon::before {
   content: "\EF91";
   margin-right: 15px;
+}
+#searchField {
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 5px;
+  width: 200px;
 }
 
 #sidebar {
