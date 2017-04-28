@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function(){
     //getBuildData();
 });
 
+// XHR request to load common templates
 function loadHandlebarsTemplate(url, callback) {
     var xhr = new XMLHttpRequest();
     xhr.open('GET', url, true);
@@ -19,6 +20,7 @@ function loadHandlebarsTemplate(url, callback) {
     xhr.send();
 }
 
+// Sample function to get Windows Build data
 function getBuildData(){
     // Create XHR object
     var xhr = new XMLHttpRequest();
@@ -28,6 +30,7 @@ function getBuildData(){
     xhr.send();
 }
 
+// Windows Build data is retrieved, display it
 function transferComplete(evt){
     buildData = JSON.parse(evt.srcElement.responseText);
     console.log(buildData);
