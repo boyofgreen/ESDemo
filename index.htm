@@ -6,6 +6,7 @@
 <title>ES Demo</title>
 
 <link href="css/styles.css" rel="stylesheet" type="text/css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
 <style>
 
 
@@ -15,16 +16,27 @@
 <body>
  <div id="mainBody">
    <header id="header">
-     <h1>Engineering System</h1>
+     <div id="titleArea">
+       <span id="mainIcon"></span>
+       <h1>Engineering System</h1>
+     </div>
+     <input id="searchField" type=text></input>
    </header>
 
    <div id="container">
      <div id="sidebar">
-
+       <ul>
+         <li>Link 1</li>
+         <li>Link 2</li>
+         <li>Link 3</li>
+         <li>Link 4</li>
+         <li>Link 5</li>
+         <li>Link 6</li>
+       </ul>
      </div>
 
      <div id="content">
-
+       <h1>This is where the actual content goes!</h1>
      </div>
    </div>
  </div>
