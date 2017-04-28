@@ -6,6 +6,19 @@ document.addEventListener("DOMContentLoaded", function(){
     //getBuildData();
 });
 
+function loadHandlebarsTemplate(url, callback) {
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', url, true);
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+            var raw = xhr.responseText;
+            var compiled = Handlebars.compile(raw);
+            callback(compiled);
+        }
+    };
+    xhr.send();
+}
+
 function getBuildData(){
     // Create XHR object
     var xhr = new XMLHttpRequest();
