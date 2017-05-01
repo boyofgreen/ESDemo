@@ -96,3 +96,9 @@ body {
 #sidebar .settings::before {
   content: "\EFA6";
 }
+
+.line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 2px;
+}

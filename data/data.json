@@ -11,24 +11,24 @@
         "health" : {
             "totalUniqueInsiders" : 852672,
             "daily" : [{
-                "date" : "4/25/2017",
+                "date" : "25-Apr-17",
                 "score" : 62712,
                 "uniqueInsiders" : 45312
             }, 
             {
-                "date" : "4/25/2017",
+                "date" : "26-Apr-17",
                 "score" : 25123,
                 "uniqueInsiders" : 81233
             }, 
             {
-                "date" : "4/26/2017",
+                "date" : "27-Apr-17",
                 "score" : 325123,
                 "uniqueInsiders" : 982121
             }, 
             {
-                "date" : "4/27/2017",
+                "date" : "28-Apr-17",
                 "score" : 432512,
-                "uniqueInsiders" : 10212341
+                "uniqueInsiders" : 1021230
             }]
         }
     }]   
