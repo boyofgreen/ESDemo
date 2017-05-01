@@ -23,7 +23,6 @@ function loadHandlebarsTemplate(url, callback) {
 
 // Store our important DOM elements
 var template = document.querySelector("#dataContent");
-//var clonedElement = document.importNode(template.content, true);
 var contentElement = document.querySelector("#content");
 
 // Array of JSON files we want to load
@@ -53,6 +52,12 @@ function transferComplete(evt) {
 
     clonedElement = template.content.cloneNode(true);
     clonedElement.querySelector(".releaseValue").innerText = buildData.builds[0].build.releaseScore;
+
+    //
+    // NOTE: We don't want to send the entire JSON file again. We only
+    //       need to send the parsed data. This is a TODO item that
+    //       hasn't been addressed yet.
+    //
     createBarChart(clonedElement.querySelector(".chart"), evt.srcElement.dataFile);
     contentElement.appendChild(clonedElement);
 }
