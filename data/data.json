@@ -6,7 +6,8 @@
             "minor" : 0,
             "build" : 6001,
             "revision" : 17521,
-            "platform" : "x86fre"
+            "platform" : "x86fre",
+            "status" : "good"
         },
         "health" : {
             "totalUniqueInsiders" : 852672,
@@ -14,37 +15,37 @@
                 "date" : "25-Apr-17",
                 "score" : 62712,
                 "uniqueInsiders" : 45312
-            }, 
+            },
             {
                 "date" : "26-Apr-17",
                 "score" : 25123,
                 "uniqueInsiders" : 81233
-            }, 
+            },
             {
                 "date" : "27-Apr-17",
                 "score" : 325123,
                 "uniqueInsiders" : 982121
-            }, 
+            },
             {
                 "date" : "28-Apr-17",
                 "score" : 432512,
                 "uniqueInsiders" : 1021230
-            }, 
+            },
             {
                 "date" : "29-Apr-17",
                 "score" : 2432512,
                 "uniqueInsiders" : 1221230
-            }, 
+            },
             {
                 "date" : "30-Apr-17",
                 "score" : 2832512,
                 "uniqueInsiders" : 1521230
-            }, 
+            },
             {
                 "date" : "1-May-17",
                 "score" : 3632512,
                 "uniqueInsiders" : 2521230
             }]
         }
-    }]   
+    }]
 }
