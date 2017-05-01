@@ -4,6 +4,8 @@ body {
 }
 #mainBody {
   width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 @font-face {
     font-family: MDL2;
