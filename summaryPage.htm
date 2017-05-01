@@ -4,11 +4,8 @@
 <head>
 <meta charset="utf-8">
 <title>ES Demo</title>
-<script>
-  navigator.serviceWorker.register('serviceworker.js', {
-  scope: '.'
-});
-</script>
+
+
 <link href="css/styles.css" rel="stylesheet" type="text/css">
 <script src="/scripts/handlebars.js"></script>
 <style>
@@ -30,22 +27,20 @@
    <div id="container">
      <div id="sidebar">
        <ul>
-         <li class="branches">Branches</li>
-         <li class="calendar">RI Calendar</li>
-         <li class="insights">Insights</li>
-         <li class="listening">Listening</li>
-         <li class="settings">Settings</li>
+         <li>Link 1</li>
+         <li>Link 2</li>
+         <li>Link 3</li>
+         <li>Link 4</li>
+         <li>Link 5</li>
+         <li>Link 6</li>
        </ul>
      </div>
 
      <div id="content">
        <h1>This is where the actual content goes!</h1>
-       <div id="chart"></div>
      </div>
    </div>
  </div>
-<script src="https://d3js.org/d3.v4.min.js"></script>
-<script src="./scripts/chart.js"></script>
 <script src="./scripts/index.js"></script>
 </body>
 </html>
