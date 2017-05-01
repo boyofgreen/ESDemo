@@ -29,6 +29,21 @@
                 "date" : "28-Apr-17",
                 "score" : 432512,
                 "uniqueInsiders" : 1021230
+            }, 
+            {
+                "date" : "29-Apr-17",
+                "score" : 2432512,
+                "uniqueInsiders" : 1221230
+            }, 
+            {
+                "date" : "30-Apr-17",
+                "score" : 2832512,
+                "uniqueInsiders" : 1521230
+            }, 
+            {
+                "date" : "1-May-17",
+                "score" : 3632512,
+                "uniqueInsiders" : 2521230
             }]
         }
     }]   
