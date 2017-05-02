@@ -1,21 +1,54 @@
 var buildData = null;
 var detailedView = false;
+var searchView = false;
+
+
+// Array of JSON files we want to load
+var jsonFiles = ["./data/17522_fbl_impressive.json", "./data/17521_rsmain.json", "./data/17522_fbl_appx.json"]
 
 document.addEventListener("DOMContentLoaded", function(){
-    //Load Windows build data
-    //Removing this call temporarily
-    //getBuildData();
     if (window.location.pathname == "/index.htm") {
-      processData();
+      processData(jsonFiles);
+
+      searchView = false;
+      detailedView = false;
+
     } else if (window.location.pathname.indexOf("fullDetails.htm") !== -1) {
       console.log("detailed view!");
+      searchView = false;
       detailedView = true;
 
       var urlParams = new URLSearchParams(window.location.search);
       var file = "./data/" + urlParams.get("details") + ".json"
       getBuildData(file);
+    } else if (window.location.pathname.indexOf("searchResults.htm") !== -1) {
+      console.log("Search view!");
+
+      searchView = true;
+      detailedView = false;
+
+      var searchString = new URLSearchParams(window.location.search).get("query");
+      console.log("The thing we are searching for is: " + searchString);
+
+      findResults(searchString);
     }
 });
+
+// Identify which JSON files contain the data we are looking for!
+function findResults(query) {
+  var filteredResults = [];
+
+  for (var i = 0; i < jsonFiles.length; i++) {
+    var fileName = jsonFiles[i];
+
+    if (fileName.indexOf(query) !== -1) {
+      filteredResults.push(fileName);
+    }
+  }
+
+  console.log(filteredResults);
+  processData(filteredResults);
+}
 
 // XHR request to load common templates
 function loadHandlebarsTemplate(url, callback) {
@@ -39,13 +72,10 @@ function getDetailedBuildData(file) {
 var template = document.querySelector("#dataContent");
 var contentElement = document.querySelector("#content");
 
-// Array of JSON files we want to load
-var jsonFiles = ["./data/17522_fbl_impressive.json", "./data/17521_rsmain.json", "./data/17522_fbl_appx.json"]
-
 // The entry point to what our app does
-function processData() {
-  for (var i = 0; i < jsonFiles.length; i++) {
-    var jsonFile = jsonFiles[i];
+function processData(fileArray) {
+  for (var i = 0; i < fileArray.length; i++) {
+    var jsonFile = fileArray[i];
     getBuildData(jsonFile);
   }
 }
