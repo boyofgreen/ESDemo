@@ -102,7 +102,10 @@ body {
 #sidebar .settings::before {
   content: "\EFA6";
 }
-
+#header a {
+  text-decoration: none;
+  color: #FFF;
+}
 .line {
   fill: none;
   stroke: steelblue;
@@ -112,6 +115,13 @@ body {
   margin: 20px;
   font-family: "Segoe UI", sans-serif;
   background-color: #FFF;
+  width: 500px;
+}
+.dataArea a {
+  text-decoration: none;
+}
+.dataArea a:hover {
+  background-color: #FEFEFE;
 }
 .dataHeader {
   color: #0078d7;

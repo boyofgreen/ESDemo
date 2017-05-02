@@ -1,10 +1,20 @@
 var buildData = null;
+var detailedView = false;
 
 document.addEventListener("DOMContentLoaded", function(){
     //Load Windows build data
     //Removing this call temporarily
     //getBuildData();
-    processData();
+    if (window.location.pathname == "/index.htm") {
+      processData();
+    } else if (window.location.pathname.indexOf("fullDetails.htm") !== -1) {
+      console.log("detailed view!");
+      detailedView = true;
+
+      var urlParams = new URLSearchParams(window.location.search);
+      var file = "./data/" + urlParams.get("details") + ".json"
+      getBuildData(file);
+    }
 });
 
 // XHR request to load common templates
@@ -21,12 +31,16 @@ function loadHandlebarsTemplate(url, callback) {
     xhr.send();
 }
 
+function getDetailedBuildData(file) {
+  console.log("File: " + file);
+}
+
 // Store our important DOM elements
 var template = document.querySelector("#dataContent");
 var contentElement = document.querySelector("#content");
 
 // Array of JSON files we want to load
-var jsonFiles = ["./data/data.json", "./data/data0.json", "./data/data1.json"]
+var jsonFiles = ["./data/17522_fbl_impressive.json", "./data/17521_rsmain.json", "./data/17522_fbl_appx.json"]
 
 // The entry point to what our app does
 function processData() {
@@ -51,14 +65,19 @@ function transferComplete(evt) {
     buildData = JSON.parse(evt.srcElement.responseText);
 
     clonedElement = template.content.cloneNode(true);
+    clonedElement.querySelector(".linkDetails").setAttribute("href", "fullDetails.htm?details=" + buildData.builds[0].branch.file);
+    clonedElement.querySelector(".branchName").innerText = buildData.builds[0].branch.name;
     clonedElement.querySelector(".releaseValue").innerText = buildData.builds[0].build.releaseScore;
+    clonedElement.querySelector(".buildNumber").innerText = buildData.builds[0].build.revision;
 
     //
     // NOTE: We don't want to send the entire JSON file again. We only
     //       need to send the parsed data. This is a TODO item that
     //       hasn't been addressed yet.
     //
-    createBarChart(clonedElement.querySelector(".chart"), evt.srcElement.dataFile);
+    if (detailedView == true) {
+      createBarChart(clonedElement.querySelector(".chart"), evt.srcElement.dataFile);
+    }
     contentElement.appendChild(clonedElement);
 }
 

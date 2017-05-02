@@ -1,5 +1,9 @@
 {
     "builds": [{
+        "branch" : {
+            "name" : "RSMAIN",
+            "file" : "17521_rsmain"
+        },
         "build" : {
             "id" : 0,
             "major" : 10,
@@ -8,7 +12,7 @@
             "revision" : 17521,
             "platform" : "x86fre",
             "status" : "good",
-            "releaseScore" : 90.1
+            "releaseScore" : 94.2
         },
         "health" : {
             "totalUniqueInsiders" : 852672,

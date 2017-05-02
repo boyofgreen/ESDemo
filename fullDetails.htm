@@ -2,44 +2,62 @@
 <html>
 
 <head>
-<meta charset="utf-8">
-<title>ES Demo</title>
+  <meta charset="utf-8">
+  <title>ES Demo</title>
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <style>
 
-<link href="css/styles.css" rel="stylesheet" type="text/css">
-<script src="/scripts/handlebars.js"></script>
-<style>
-
-
-</style>
+  </style>
 </head>
 
 <body>
- <div id="mainBody">
-   <header id="header">
-     <div id="titleArea">
-       <span id="mainIcon"></span>
-       <h1>Engineering System</h1>
-     </div>
-     <input id="searchField" type=text></input>
-   </header>
+  <div id="mainBody">
+    <header id="header">
+      <a href="index.htm">
+        <div id="titleArea">
+          <span id="mainIcon"></span>
+          <h1>Engineering System</h1>
+        </div>
+      </a>
+      <input id="searchField" type=text></input>
+    </header>
 
-   <div id="container">
-     <div id="sidebar">
-       <ul>
-         <li>Link 1</li>
-         <li>Link 2</li>
-         <li>Link 3</li>
-         <li>Link 4</li>
-         <li>Link 5</li>
-         <li>Link 6</li>
-       </ul>
-     </div>
+    <div id="container">
+      <div id="sidebar">
+        <ul>
+          <li class="branches">Branches</li>
+          <li class="calendar">RI Calendar</li>
+          <li class="insights">Insights</li>
+          <li class="listening">Listening</li>
+          <li class="settings">Settings</li>
+        </ul>
+      </div>
 
-     <div id="content">
-       <h1>This is where the actual content goes!</h1>
-     </div>
-   </div>
- </div>
-<script src="./scripts/index.js"></script>
+      <div id="content">
+
+      </div>
+  </div>
+
+  <template id="dataContent">
+    <div class="dataArea">
+      <a class="linkDetails" href="fullDetails.htm">
+        <div class="dataHeader">
+          <h2 class="branchName">RSMAIN</h2>
+          <h3 class="buildNumber">16188.0.20170429</h3>
+        </div>
+      </a>
+      <div class="dataContent">
+          <div class="releaseBox">
+            <span>Release Score: </span><span class="releaseValue">184</span>
+          </div>
+      </div>
+      <div class="chart"></div>
+    </div>
+  </template>
+
+  <script src="/scripts/d3.js"></script>
+  <script src="/scripts/chart.js"></script>
+  <script src="/scripts/index.js"></script>
 </body>
+
 </html>
