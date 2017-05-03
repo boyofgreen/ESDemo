@@ -63,6 +63,8 @@ body {
 #container h1 {
   font-family: "Segoe UI", sans-serfif;
   font-weight: 100;
+  margin-top: 10px;
+  margin-left: 15px;
 }
 #content {
   padding: 10px;
@@ -152,6 +154,7 @@ body {
   font-size: 20px;
   font-weight: 100;
   padding: 15px;
+  border-bottom: 1px #CCC solid
 }
 .releaseBox span:nth-child(2) {
   font-weight: bold;
@@ -164,4 +167,44 @@ body {
   padding: 0;
   font-weight: 100;
   color: #0078d7;
+}
+.additionalDetails {
+  height: 110px;
+  display: flex;
+}
+.additionalDetails p {
+  margin: 10px;
+  font-size: 16px;
+  font-family: "MDL2", "Segoe UI", sans-serif;
+}
+.cLeft {
+  width: 50%;
+  float: left;
+}
+.cRight {
+  width: 50%;
+  float: right;
+}
+
+.additionalDetails *::before {
+  margin-right: 10px;
+}
+
+.hours::before {
+  content: "\EC92";
+}
+.hotbugs::before {
+  content: "\E713";
+}
+.triage::before {
+  content: "\E81E";
+}
+.warnings::before {
+  content: "\E2AC";
+}
+.arch::before {
+  content: "\E950";
+}
+.passrate::before {
+  content: "\E13C";
 }
