@@ -98,7 +98,12 @@ function transferComplete(evt) {
     clonedElement.querySelector(".linkDetails").setAttribute("href", "fullDetails.htm?details=" + buildData.builds[0].branch.file);
     clonedElement.querySelector(".branchName").innerText = buildData.builds[0].branch.name;
     clonedElement.querySelector(".releaseValue").innerText = buildData.builds[0].build.releaseScore;
-    clonedElement.querySelector(".buildNumber").innerText = buildData.builds[0].build.revision;
+    clonedElement.querySelector(".hours").innerText = buildData.builds[0].build.hours;
+    clonedElement.querySelector(".hotbugs").innerText = buildData.builds[0].build.hotbugs;
+    clonedElement.querySelector(".triage").innerText = buildData.builds[0].build.triage;
+    clonedElement.querySelector(".warnings").innerText = buildData.builds[0].build.warnings;
+    clonedElement.querySelector(".arch").innerText = buildData.builds[0].build.platform;
+    clonedElement.querySelector(".passrate").innerText = buildData.builds[0].build.passrate;
 
     //
     // NOTE: We don't want to send the entire JSON file again. We only
