@@ -7,8 +7,9 @@ var searchView = false;
 var jsonFiles = ["./data/17522_fbl_impressive.json", "./data/17521_rsmain.json", "./data/17522_fbl_appx.json"]
 
 document.addEventListener("DOMContentLoaded", function(){
+
     if (window.location.pathname == "/index.htm") {
-      processData(jsonFiles);
+      displayFavorites();
 
       searchView = false;
       detailedView = false;
@@ -69,8 +70,41 @@ function loadHandlebarsTemplate(url, callback) {
     xhr.send();
 }
 
-function getDetailedBuildData(file) {
-  console.log("File: " + file);
+//
+// Listen to clicks on the favorite icon
+//
+function setupFavoritesEvents() {
+  var favorites = document.querySelectorAll(".favorite");
+
+  for (var i = 0; i < favorites.length; i++) {
+    var favorite = favorites[i];
+    favorite.addEventListener("click", processFavorite, false);
+  }
+}
+
+// keep track of all the files we currently have
+// favorited and add/remove them
+function processFavorite(e) {
+  e.preventDefault();
+
+  var favoriteFile = e.target.getAttribute("data-file");
+  console.log("Favorite clicked!");
+  var favoritesArray;
+
+  if (localStorage.getItem("favorites")) {
+    console.log("creating favorites!");
+    favoritesArray = JSON.parse(localStorage.getItem("favorites"));
+  } else {
+    favoritesArray = [];
+  }
+
+  if (favoritesArray.includes(favoriteFile)) {
+    // do nothing for now
+  } else {
+    favoritesArray.push(favoriteFile);
+  }
+
+  localStorage.setItem("favorites", JSON.stringify(favoritesArray));
 }
 
 // Store our important DOM elements
@@ -120,6 +154,19 @@ function transferComplete(evt) {
       createBarChart(clonedElement.querySelector(".chart"), evt.srcElement.dataFile);
     }
     contentElement.appendChild(clonedElement);
+
+    setupFavoritesEvents();
+}
+
+function displayFavorites() {
+  var favoritesArray;
+
+  if (localStorage.getItem("favorites")) {
+    favoritesArray = JSON.parse(localStorage.getItem("favorites"));
+    processData(favoritesArray);
+  } else {
+    console.log("No Favorites!");
+  }
 }
 
 function createBarChart(targetElement, jsonData) {

@@ -64,9 +64,11 @@ body {
   font-weight: bold;
   line-height: 0;
   transition: transform .1s ease-out;
+  z-index: 100;
 }
 .favorite:hover {
   transform: scale(1.3, 1.3);
+  cursor: pointer;
 }
 #container {
   display: flex;
