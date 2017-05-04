@@ -31,6 +31,11 @@ document.addEventListener("DOMContentLoaded", function(){
       console.log("The thing we are searching for is: " + searchString);
 
       findResults(searchString);
+    } else if (window.location.pathname == "/summaryPage.htm") {
+      processData(jsonFiles);
+
+      searchView = false;
+      detailedView = false;
     }
 });
 
