@@ -102,6 +102,7 @@ function transferComplete(evt) {
     clonedElement = template.content.cloneNode(true);
     clonedElement.querySelector(".linkDetails").setAttribute("href", "fullDetails.htm?details=" + buildData.builds[0].branch.file);
     clonedElement.querySelector(".branchName").innerText = buildData.builds[0].branch.name;
+    clonedElement.querySelector(".favorite").setAttribute("data-file", evt.srcElement.dataFile);
     clonedElement.querySelector(".releaseValue").innerText = buildData.builds[0].build.releaseScore;
     clonedElement.querySelector(".hours").innerText = buildData.builds[0].build.hours;
     clonedElement.querySelector(".hotbugs").innerText = buildData.builds[0].build.hotbugs;
