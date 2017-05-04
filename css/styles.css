@@ -49,6 +49,9 @@ body {
   padding: 5px;
   width: 200px;
 }
+.hideFavorite {
+  opacity: .5;
+}
 #sidebar {
   width: 75px;
   background-color: #EEE;

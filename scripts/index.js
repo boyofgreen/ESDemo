@@ -88,7 +88,6 @@ function processFavorite(e) {
   e.preventDefault();
 
   var favoriteFile = e.target.getAttribute("data-file");
-  console.log("Favorite clicked!");
   var favoritesArray;
 
   if (localStorage.getItem("favorites")) {
@@ -99,7 +98,12 @@ function processFavorite(e) {
   }
 
   if (favoritesArray.includes(favoriteFile)) {
-    // do nothing for now
+    var index = favoritesArray.indexOf(favoriteFile);
+    favoritesArray.splice(index, 1);
+
+    var favoriteStar = document.querySelector(".favorite[data-file='" + favoriteFile + "']");
+    favoriteStar.classList.toggle("hideFavorite");
+
   } else {
     favoritesArray.push(favoriteFile);
   }
@@ -136,7 +140,27 @@ function transferComplete(evt) {
     clonedElement = template.content.cloneNode(true);
     clonedElement.querySelector(".linkDetails").setAttribute("href", "fullDetails.htm?details=" + buildData.builds[0].branch.file);
     clonedElement.querySelector(".branchName").innerText = buildData.builds[0].branch.name;
+
+    // deal with the favorite star
     clonedElement.querySelector(".favorite").setAttribute("data-file", evt.srcElement.dataFile);
+
+    var favoritesArray;
+
+    if (localStorage.getItem("favorites")) {
+      favoritesArray = JSON.parse(localStorage.getItem("favorites"));
+    } else {
+      console.log("No Favorites!");
+    }
+
+    for (var i = 0; i < favoritesArray.length; i++) {
+      var favoriteFile = favoritesArray[i];
+
+      if (favoriteFile == evt.srcElement.dataFile) {
+        clonedElement.querySelector(".favorite").classList.toggle("hideFavorite");
+      }
+    }
+
+
     clonedElement.querySelector(".releaseValue").innerText = buildData.builds[0].build.releaseScore;
     clonedElement.querySelector(".hours").innerText = buildData.builds[0].build.hours;
     clonedElement.querySelector(".hotbugs").innerText = buildData.builds[0].build.hotbugs;
@@ -156,6 +180,7 @@ function transferComplete(evt) {
     contentElement.appendChild(clonedElement);
 
     setupFavoritesEvents();
+    //updateFavoriteStars();
 }
 
 function displayFavorites() {
@@ -166,6 +191,24 @@ function displayFavorites() {
     processData(favoritesArray);
   } else {
     console.log("No Favorites!");
+  }
+}
+
+//
+// We want to visually differentiate builds you've favorited
+// from builds you have not favorited
+//
+function updateFavoriteStars() {
+  var favoritesArray;
+
+  if (localStorage.getItem("favorites")) {
+    favoritesArray = JSON.parse(localStorage.getItem("favorites"));
+
+    for (var i = 0; i < favoritesArray.length; i++) {
+      var favoriteFile = favoritesArray[i];
+      var favoriteStar = document.querySelector(".favorite[data-file='" + favoriteFile + "']");
+      favoriteStar.classList.toggle("hideFavorite");
+    }
   }
 }
 
