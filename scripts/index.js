@@ -28,7 +28,8 @@ document.addEventListener("DOMContentLoaded", function(){
       searchView = true;
       detailedView = false;
 
-      var searchString = new URLSearchParams(window.location.search).get("query");
+      //var searchString = new URLSearchParams(window.location.search).get("query");
+      var searchString = window.location.search.split("=")[1];
       console.log("The thing we are searching for is: " + searchString);
 
       findResults(searchString);
@@ -144,7 +145,7 @@ function transferComplete(evt) {
     // deal with the favorite star
     clonedElement.querySelector(".favorite").setAttribute("data-file", evt.srcElement.dataFile);
 
-    var favoritesArray;
+    var favoritesArray = [];
 
     if (localStorage.getItem("favorites")) {
       favoritesArray = JSON.parse(localStorage.getItem("favorites"));
