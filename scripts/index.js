@@ -19,8 +19,8 @@ document.addEventListener("DOMContentLoaded", function(){
       searchView = false;
       detailedView = true;
 
-      var urlParams = new URLSearchParams(window.location.search);
-      var file = "./data/" + urlParams.get("details") + ".json"
+      var searchString = window.location.search.split("=")[1];
+      var file = "./data/" + searchString + ".json"
       getBuildData(file);
     } else if (window.location.pathname.indexOf("searchResults.htm") !== -1) {
       console.log("Search view!");
