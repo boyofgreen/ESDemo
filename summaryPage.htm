@@ -4,15 +4,6 @@
 <head>
   <meta charset="utf-8">
   <title>ES Demo</title>
-  <script>
-    navigator.serviceWorker.register('serviceworker.js', {
-      scope: '.'
-    }).then(function(registration) {
-
-                console.log('The service worker has been registered ', registration);
-
-});
-  </script>
   <link href="css/styles.css" rel="stylesheet" type="text/css">
   <script src="/scripts/handlebars.js"></script>
   <style>
@@ -60,6 +51,7 @@
       <a class="linkDetails" href="fullDetails.htm">
         <div class="dataHeader">
           <h2 class="branchName">RSMAIN</h2>
+          <span class="favorite">⭐</span>
           <h3 class="buildNumber">16188.0.20170429</h3>
         </div>
       </a>

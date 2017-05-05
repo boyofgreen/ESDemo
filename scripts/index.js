@@ -4,7 +4,7 @@ var searchView = false;
 
 
 // Array of JSON files we want to load
-var jsonFiles = ["./data/17522_fbl_impressive.json", "./data/17521_rsmain.json", "./data/17522_fbl_appx.json"]
+var jsonFiles = ["./data/17522_fbl_impressive.json", "./data/17521_rsmain.json", "./data/17522_fbl_appx.json"];
 
 document.addEventListener("DOMContentLoaded", function(){
 
@@ -138,12 +138,16 @@ function getBuildData(file) {
 function transferComplete(evt) {
     buildData = JSON.parse(evt.srcElement.responseText);
 
-    clonedElement = template.content.cloneNode(true);
+    var clonedElement = template.content.cloneNode(true);
     clonedElement.querySelector(".linkDetails").setAttribute("href", "fullDetails.htm?details=" + buildData.builds[0].branch.file);
     clonedElement.querySelector(".branchName").innerText = buildData.builds[0].branch.name;
 
     // deal with the favorite star
-    clonedElement.querySelector(".favorite").setAttribute("data-file", evt.srcElement.dataFile);
+    var starElement = clonedElement.querySelector(".favorite");
+
+    if (starElement) {
+      starElement.setAttribute("data-file", evt.srcElement.dataFile);
+    }
 
     var favoritesArray = [];
 
