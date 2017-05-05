@@ -234,3 +234,37 @@ form {
 .passrate::before {
   content: "\E13C";
 }
+
+
+#dataViewWrapper {
+
+width: 500px;
+overflow:hidden;
+
+}
+#dataViews {
+  width: 1500px;
+  display: flex;
+flex-wrap: nowrap;
+transition-property: transform;
+transition-duration: 500ms;
+transform: translateX(0)
+}
+#dataViews .dataArea{
+  margin: 0;
+}
+
+#dataViewWrapper[data-datapos = "1"] #dataViews{
+
+transform: translateX(-33.33%)
+
+}
+#dataViewWrapper[data-datapos = "2"] #dataViews{
+
+transform: translateX(-66.666%)
+
+}
+
+body.build{
+  background-color: red;
+}
