@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Slider Stuff</title>
+
+  <style>
+    .item {
+      width: 600px;
+      height: 350px;
+      background-color: #EEE;
+      margin-top: 15px;
+      position: absolute;
+      display: inline-block;
+      box-shadow: 0px 0px 5px 0px #CCC;
+      transition: all .2s ease-out;
+    }
+
+    .container {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      transition: transform .2s ease-out;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="item">
+      <h1>Hello</h1>
+    </div>
+    <div class="item">
+
+    </div>
+    <div class="item">
+
+    </div>
+    <div class="item">
+
+    </div>
+    <div class="item">
+
+    </div>
+    <div class="item">
+
+    </div>
+    <div class="item">
+
+    </div>
+  </div>
+
+  <script>
+    var currentItem = 0;
+    var items;
+
+    var container = document.querySelector(".container");
+
+    function setup() {
+      items = document.querySelectorAll(".item");
+
+      for (var i = 0; i < items.length; i++) {
+        var item = items[i];
+
+        item.style.transform = "translateX(" + 10 * i + "px)";
+        item.style.zIndex = 1000 - i;
+      }
+    }
+    setup();
+
+    document.body.addEventListener("keydown", navigateCarousel, false);
+    document.body.addEventListener("keydown", navigateCarousel, false);
+    container.addEventListener("transitionend", transitionDone, false);
+
+    function navigateCarousel(e) {
+      var key = e.keyCode;
+
+      if (key == 37) {
+        console.log("left key pressed");
+        previousItem();
+      } else if (key == 39) {
+        console.log("right key pressed");
+        nextItem();
+      }
+    }
+
+    function transitionDone(e) {
+      if (e.propertyName == "transform") {
+        //console.log(e.target);
+      }
+    }
+
+    function previousItem() {
+      if (currentItem > 0) {
+        currentItem--;
+
+        var item = items[currentItem];
+
+        var shiftValue = 10 * (currentItem + 1);
+
+        console.log("Shifting left by: " + shiftValue);
+
+        item.style.transform = "translateX(" + shiftValue + "px)";
+        container.style.transform = "translateX(" + -1 * (10 * (currentItem)) + "px)";
+        item.style.opacity = 1;
+
+      } else {
+        currentItem = 0;
+      }
+
+      //console.log(currentItem);
+    }
+
+    function nextItem() {
+      if (currentItem < items.length - 1) {
+        var item = items[currentItem];
+
+        var shiftValue = -1 * 10 * (currentItem + 1);
+
+        console.log("Shifting right by: " + shiftValue);
+
+        item.style.transform = "translateX(" + shiftValue + "px)";
+        container.style.transform = "translateX(" + shiftValue + "px)";
+        item.style.opacity = 0;
+
+        currentItem++;
+      } else {
+        currentItem = items.length - 1;
+      }
+
+      //console.log(currentItem);
+    }
+  </script>
+</body>
+
+</html>
