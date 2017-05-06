@@ -4,7 +4,7 @@ var searchView = false;
 
 
 // Array of JSON files we want to load
-var jsonFiles = ["./data/17522_fbl_impressive.json", "./data/17521_rsmain.json", "./data/17522_fbl_appx.json"];
+var jsonFiles = ["./data/17522_fbl_impressive.json", "./data/17521_rsmain.json", "./data/17522_fbl_appx.json", "./data/activity.json"];
 
 document.addEventListener("DOMContentLoaded", function(){
 
