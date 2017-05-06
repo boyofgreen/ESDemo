@@ -8,6 +8,7 @@ var jsonFiles = ["./data/17522_fbl_impressive.json", "./data/17521_rsmain.json",
 
 document.addEventListener("DOMContentLoaded", function(){
 
+    document.getElementById("searchField").addEventListener("input", searchAutoComplete);
     if (window.location.pathname == "/index.htm") {
       displayFavorites();
 
