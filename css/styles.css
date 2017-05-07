@@ -285,7 +285,8 @@ body.build{
 
 .autolistContainer {
   float: right;
-  margin-right: 20px;
+  margin-right: 18px;
+  margin-left:1px;
   top: -20px;
   width: 200px;
   position:relative;
@@ -311,5 +312,11 @@ body.build{
   display: block;
   position: absolute;
   margin-top:-10px;
-  min-width: 210px;
+  margin-left:1px;
+  min-width: 208px;
+}
+
+.autolist:hover {
+  background-color: gray;
+  color:white;
 }
