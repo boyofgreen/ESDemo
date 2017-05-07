@@ -43,9 +43,7 @@ function displayAutoComplete(terms){
 }
 
 //TODO: check for Arrow down and up keys
-//TODO: highlight select
 //TODO: handle enter
-//TODO: handle click
 
 function addSearchTerm(t){
     var exists = autoCompleteTerms.indexOf(t);
@@ -59,8 +57,15 @@ function doSearch(evt) {
     document.getElementById(searchBoxName).form.submit();
 }
 
+function checkForArrowKeys(evt){
+    //TODO: handle arrows
+}
+
 document.addEventListener("DOMContentLoaded", function(){
     // Add listener for the search box on the html page
     document.getElementById(searchBoxName)
             .addEventListener("input", searchAutoComplete);
+
+    document.getElementById(searchBoxName)
+            .addEventListener("keypress", checkForArrowKeys);
 });
