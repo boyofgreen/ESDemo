@@ -3,7 +3,7 @@ var detailedView = false;
 var searchView = false;
 var dataLocation = './data/';
 var dataType = '.json';
-var fileNames = ["17522_fbl_impressive","17521_rsmain","17522_fbl_appx"];
+var fileNames = ["17522_fbl_impressive","17521_rsmain","17522_fbl_appx","21677_fbl_ninjacat","950_fbl_chicago"];
 
 // Array of JSON files we want to load
 var jsonFiles = new Array(); //["./data/17522_fbl_impressive.json", "./data/17521_rsmain.json", "./data/17522_fbl_appx.json"];

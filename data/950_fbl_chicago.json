@@ -1,0 +1,53 @@
+{
+    "builds": [{
+        "branch" : {
+            "name" : "Chicago",
+            "file" : "950_fbl_chicago"
+        },
+        "build" : {
+            "id" : 0,
+            "major" : 4,
+            "minor" : 0,
+            "build" : 0,
+            "revision" : 950,
+            "platform" : "x86fre",
+            "status" : "good",
+            "releaseScore" : 95,
+            "hours" : 1,
+            "hotbugs" : 95,
+            "triage" : "done",
+            "warnings" : 4,
+            "passrate" : "95.0%"
+        },
+        "health" : {
+            "daily" : [{
+                "date" : "1-May-17",
+                "uniqueInsiders" : 1
+            },
+            {
+                "date" : "2-May-17",
+                "uniqueInsiders" : 5
+            },
+            {
+                "date" : "3-May-17",
+                "uniqueInsiders" : 0
+            },
+            {
+                "date" : "4-May-17",
+                "uniqueInsiders" : 10
+            },
+            {
+                "date" : "5-May-17",
+                "uniqueInsiders" : 0
+            },
+            {
+                "date" : "6-May-17",
+                "uniqueInsiders" : 0
+            },
+            {
+                "date" : "7-May-17",
+                "uniqueInsiders" : 0
+            }]
+        }
+    }]
+}

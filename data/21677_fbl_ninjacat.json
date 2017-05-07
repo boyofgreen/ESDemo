@@ -1,0 +1,53 @@
+{
+    "builds": [{
+        "branch" : {
+            "name" : "NinjaCat",
+            "file" : "21677_fbl_ninjacat"
+        },
+        "build" : {
+            "id" : 0,
+            "major" : 10,
+            "minor" : 0,
+            "build" : 6001,
+            "revision" : 21677,
+            "platform" : "x86fre",
+            "status" : "good",
+            "releaseScore" : 98.6,
+            "hours" : 100,
+            "hotbugs" : 3,
+            "triage" : "done",
+            "warnings" : 4,
+            "passrate" : "99.2%"
+        },
+        "health" : {
+            "daily" : [{
+                "date" : "1-May-17",
+                "uniqueInsiders" : 1231455
+            },
+            {
+                "date" : "2-May-17",
+                "uniqueInsiders" : 2631215
+            },
+            {
+                "date" : "3-May-17",
+                "uniqueInsiders" : 5737815
+            },
+            {
+                "date" : "4-May-17",
+                "uniqueInsiders" : 8431221
+            },
+            {
+                "date" : "5-May-17",
+                "uniqueInsiders" : 9321241
+            },
+            {
+                "date" : "6-May-17",
+                "uniqueInsiders" : 10345671
+            },
+            {
+                "date" : "7-May-17",
+                "uniqueInsiders" : 11902123
+            }]
+        }
+    }]
+}
