@@ -234,10 +234,10 @@ function createBarChart(targetElement, jsonData) {
 
   // set the dimensions and margins of the graph
   var margin = {
-      top: 20,
-      right: 20,
-      bottom: 30,
-      left: 80
+      top: 20,    // Top Title Height
+      right: 20,  // Right Axis Width
+      bottom: 80, // Bottom Axis Height
+      left: 80    // Left Axis Width
     },
     width = 500 - margin.left - margin.right,
     height = 300 - margin.top - margin.bottom;
@@ -293,14 +293,22 @@ function createBarChart(targetElement, jsonData) {
       .attr("class", "line")
       .attr("d", valueline);
 
+
+    var p = d3.precisionPrefix(1e5, 1.3e6);
+
     // Add the X Axis
     svg.append("g")
       .attr("transform", "translate(0," + height + ")")
-      .call(d3.axisBottom(x));
+      .call(d3.axisBottom(x).tickFormat(d3.timeFormat("%Y-%m-%d")))
+      .selectAll("text") 
+        .style("text-anchor", "end")
+        .attr("dx", "-.8em")
+        .attr("dy", ".15em")
+        .attr("transform", "rotate(-65)");
 
     // Add the Y Axis
     svg.append("g")
-      .call(d3.axisLeft(y));
+      .call(d3.axisLeft(y).tickFormat(d3.formatPrefix("." + p, 1.3e6)));
 
   });
 
