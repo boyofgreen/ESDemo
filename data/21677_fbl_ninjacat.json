@@ -1,7 +1,7 @@
 {
     "builds": [{
         "branch" : {
-            "name" : "NinjaCat",
+            "name" : "FBL_NINJACAT",
             "file" : "21677_fbl_ninjacat"
         },
         "build" : {
@@ -17,7 +17,8 @@
             "hotbugs" : 3,
             "triage" : "done",
             "warnings" : 4,
-            "passrate" : "99.2%"
+            "passrate" : "99.2%",
+            "display" : "21677.0.20170510"
         },
         "health" : {
             "daily" : [{

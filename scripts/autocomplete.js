@@ -12,7 +12,7 @@ function searchAutoComplete(evt){
     if(evt.target.value.length > 0) {
         autoCompleteTerms.find((term) => {
             // Check for partial matches
-            if(term.substring(0,evt.target.value.length) === evt.target.value) {
+            if(term.substring(0,evt.target.value.length).toLowerCase() === evt.target.value.toLowerCase()) {
                 currentTerms.push(term);
             }
         })

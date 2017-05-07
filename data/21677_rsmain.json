@@ -1,23 +1,24 @@
 {
     "builds": [{
         "branch" : {
-            "name" : "FBL_APPX",
-            "file" : "17522_fbl_appx"
+            "name" : "RSMAIN",
+            "file" : "21677_rsmain"
         },
         "build" : {
             "id" : 0,
             "major" : 10,
             "minor" : 0,
             "build" : 6001,
-            "revision" : 17522,
-            "platform" : "x64fre",
-            "status" : "building",
-            "releaseScore" : 87.9,
+            "revision" : 21677,
+            "platform" : "x86fre",
+            "status" : "good",
+            "releaseScore" : 94.2,
             "hours" : 100,
             "hotbugs" : 3,
             "triage" : "done",
             "warnings" : 4,
-            "passrate" : "99.2%"
+            "passrate" : "99.2%",
+            "display" : "21677.0.20170510"
         },
         "health" : {
             "totalUniqueInsiders" : 852672,
