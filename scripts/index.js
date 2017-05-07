@@ -154,7 +154,7 @@ function transferComplete(evt) {
     var clonedElement = template.content.cloneNode(true);
     clonedElement.querySelector(".linkDetails").setAttribute("href", "fullDetails.htm?details=" + buildData.builds[0].branch.file);
     clonedElement.querySelector(".branchName").innerText = buildData.builds[0].branch.name;
-
+    clonedElement.querySelector(".buildNumber").innerText = buildData.builds[0].build.display;
     // deal with the favorite star
     var starElement = clonedElement.querySelector(".favorite");
 
