@@ -135,6 +135,7 @@ body {
   font-family: "Segoe UI", sans-serif;
   background-color: #FFF;
   width: 500px;
+  float: left;
 }
 .dataArea a {
   text-decoration: none;
@@ -319,4 +320,13 @@ body.build{
 .autolist:hover {
   background-color: gray;
   color:white;
+}
+
+#activityFeed {
+  height: 400px;
+  overflow: none;
+  width: 300px;
+  border: solid 1px red;
+  float: left;
+  margin: 20px;
 }
