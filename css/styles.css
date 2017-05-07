@@ -46,6 +46,7 @@ body {
 #searchField {
   margin-left: 10px;
   margin-right: 10px;
+  margin-bottom: 10px;
   padding: 5px;
   width: 200px;
 }
@@ -287,6 +288,7 @@ body.build{
   margin-right: 20px;
   top: -20px;
   width: 200px;
+  position:relative;
 }
 
 .autolist {
@@ -294,10 +296,19 @@ body.build{
   text-decoration: none;
   font-family: "Segoe UI", sans-serif;
   font-size:small;
-  display: fixed;
-  /*display: flex;
-  flex-direction: column;
-  justify-content: flex-end;*/
   background-color:white;
   cursor: pointer;
+  margin-left:10px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: block;
+  position: absolute;
+  margin-top:-10px;
+  min-width: 210px;
 }

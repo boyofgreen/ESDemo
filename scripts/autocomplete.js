@@ -25,7 +25,7 @@ function searchAutoComplete(evt){
 function displayAutoComplete(terms){
     // Create an anchor element
     var list = document.createElement("div");
-    list.setAttribute("class","autolistContainer");
+    // list.setAttribute("class","autolistContainer");
     // Iterate through all matching terms
     for(i = 0; i < terms.length; i++) {
         var item = document.createElement("div");

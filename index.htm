@@ -31,12 +31,15 @@
       </a>
       
       <form action="searchResults.htm" method="GET">
-        <input id="searchField" name="query" autocomplete="off" type="search" value></input>
+        <div class="dropdown">
+          <input id="searchField" name="query" autocomplete="off" type="search" value></input>
+          <div class="dropdown-content" id="searchAutoComplete"></div>
+        </div>
         <input type="submit" />
       </form>
     </header>
 
-    <div id="searchAutoComplete"></div>
+    
 
     <div id="container">
       <div id="sidebar">
