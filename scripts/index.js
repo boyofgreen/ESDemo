@@ -1,45 +1,55 @@
 var buildData = null;
 var detailedView = false;
 var searchView = false;
-
+var dataLocation = './data/';
+var dataType = '.json';
+var fileNames = ["17522_fbl_impressive","17521_rsmain","17522_fbl_appx"];
 
 // Array of JSON files we want to load
-var jsonFiles = ["./data/17522_fbl_impressive.json", "./data/17521_rsmain.json", "./data/17522_fbl_appx.json", "./data/activity.json"];
+var jsonFiles = new Array(); //["./data/17522_fbl_impressive.json", "./data/17521_rsmain.json", "./data/17522_fbl_appx.json"];
 
 document.addEventListener("DOMContentLoaded", function(){
 
-    document.getElementById("searchField").addEventListener("input", searchAutoComplete);
-    if (window.location.pathname == "/index.htm") {
-      displayFavorites();
-
-      searchView = false;
-      detailedView = false;
-
-    } else if (window.location.pathname.indexOf("fullDetails.htm") !== -1) {
-      console.log("detailed view!");
-      searchView = false;
-      detailedView = true;
-
-      var searchString = window.location.search.split("=")[1];
-      var file = "./data/" + searchString + ".json"
-      getBuildData(file);
-    } else if (window.location.pathname.indexOf("searchResults.htm") !== -1) {
-      console.log("Search view!");
-
-      searchView = true;
-      detailedView = false;
-
-      //var searchString = new URLSearchParams(window.location.search).get("query");
-      var searchString = window.location.search.split("=")[1];
-      console.log("The thing we are searching for is: " + searchString);
-
-      findResults(searchString);
-    } else if (window.location.pathname == "/summaryPage.htm") {
-      processData(jsonFiles);
-
-      searchView = false;
-      detailedView = false;
+  for(i = 0; i < fileNames.length; i++){
+    jsonFiles.push(dataLocation + fileNames[i] + dataType);
+    var terms = fileNames[i].split("_");
+    for(j = 0; j< terms.length; j++)
+    {
+      addSearchTerm(terms[j]);
     }
+  } 
+
+  if (window.location.pathname == "/index.htm") {
+    displayFavorites();
+
+    searchView = false;
+    detailedView = false;
+
+  } else if (window.location.pathname.indexOf("fullDetails.htm") !== -1) {
+    console.log("detailed view!");
+    searchView = false;
+    detailedView = true;
+
+    var searchString = window.location.search.split("=")[1];
+    var file = "./data/" + searchString + ".json"
+    getBuildData(file);
+  } else if (window.location.pathname.indexOf("searchResults.htm") !== -1) {
+    console.log("Search view!");
+
+    searchView = true;
+    detailedView = false;
+
+    //var searchString = new URLSearchParams(window.location.search).get("query");
+    var searchString = window.location.search.split("=")[1];
+    console.log("The thing we are searching for is: " + searchString);
+
+    findResults(searchString);
+  } else if (window.location.pathname == "/summaryPage.htm") {
+    processData(jsonFiles);
+
+    searchView = false;
+    detailedView = false;
+  }
 });
 
 // Identify which JSON files contain the data we are looking for!
