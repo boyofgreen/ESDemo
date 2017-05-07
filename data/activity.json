@@ -1,37 +1,49 @@
 {
     "code": [
         {
-            "loc":34,
+            "locAdded":34,
+            "locRemoved":2,
+            "branch":"FBL_CHICAGO",
             "dev":"Kevin",
             "quality":"low"
         },
         {
-            "loc":621,
+            "locAdded":621,
+            "locRemoved":55,
+            "branch":"FBL_NARWHAL",
             "dev":"John-David",
             "quality":"high"
         },
         {
-            "loc":5213,
+            "locAdded":5213,
+            "locRemoved":541,
+            "branch":"FBL_NARWHAL",
             "dev":"Jeff",
             "quality":"?"
         },
         {
-            "loc":212,
+            "locAdded":212,
+            "locRemoved":23,
+            "branch":"FBL_NARWHAL",
             "dev":"Melanie",
             "quality":"high"
         },
         {
-            "loc":314,
+            "locAdded":314,
+            "locRemoved":25,
+            "branch":"FBL_NINJACAT",
             "dev":"Sarita",
             "quality":"high"
         },
         {
-            "loc":156,
+            "locAdded":156,
+            "locRemoved": 34,
             "dev":"Shou",
             "quality":"high"
         },
         {
-            "loc":267,
+            "locAdded":267,
+            "locRemoved":15,
             "dev":"Zoey",
             "quality":"high"
         }
