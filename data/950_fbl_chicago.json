@@ -1,7 +1,7 @@
 {
     "builds": [{
         "branch" : {
-            "name" : "Chicago",
+            "name" : "FBL_CHICAGO",
             "file" : "950_fbl_chicago"
         },
         "build" : {
@@ -21,31 +21,31 @@
         },
         "health" : {
             "daily" : [{
-                "date" : "1-May-17",
+                "date" : "1-May-95",
                 "uniqueInsiders" : 1
             },
             {
-                "date" : "2-May-17",
+                "date" : "2-May-95",
                 "uniqueInsiders" : 5
             },
             {
-                "date" : "3-May-17",
+                "date" : "3-May-95",
                 "uniqueInsiders" : 0
             },
             {
-                "date" : "4-May-17",
+                "date" : "4-May-95",
                 "uniqueInsiders" : 10
             },
             {
-                "date" : "5-May-17",
+                "date" : "5-May-95",
                 "uniqueInsiders" : 0
             },
             {
-                "date" : "6-May-17",
+                "date" : "6-May-95",
                 "uniqueInsiders" : 0
             },
             {
-                "date" : "7-May-17",
+                "date" : "7-May-95",
                 "uniqueInsiders" : 0
             }]
         }
