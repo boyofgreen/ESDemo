@@ -281,3 +281,23 @@ body.build{
 #left:hover, #right:hover {
   background-color: #FFF;
 }
+
+.autolistContainer {
+  float: right;
+  margin-right: 20px;
+  top: -20px;
+  width: 200px;
+}
+
+.autolist {
+  color: gray;
+  text-decoration: none;
+  font-family: "Segoe UI", sans-serif;
+  font-size:small;
+  display: fixed;
+  /*display: flex;
+  flex-direction: column;
+  justify-content: flex-end;*/
+  background-color:white;
+  cursor: pointer;
+}
