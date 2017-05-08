@@ -134,7 +134,7 @@ body {
   margin: 20px;
   font-family: "Segoe UI", sans-serif;
   background-color: #FFF;
-  width: 500px;
+  min-width: 500px;
   float: left;
 }
 .dataArea a {

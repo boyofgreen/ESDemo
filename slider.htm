@@ -6,7 +6,7 @@
   <title>Slider Stuff</title>
 
   <style>
-    .item {
+    .slideItem {
       width: 600px;
       height: 350px;
       background-color: #EEE;
@@ -17,7 +17,7 @@
       transition: all .2s ease-out;
     }
 
-    .container {
+    .slideContainer {
       position: relative;
       display: flex;
       justify-content: center;
@@ -28,26 +28,26 @@
 
 <body>
 
-  <div class="container">
-    <div class="item">
+  <div class="slideContainer">
+    <div class="slideItem">
       <h1>Hello</h1>
     </div>
-    <div class="item">
+    <div class="slideItem">
 
     </div>
-    <div class="item">
+    <div class="slideItem">
 
     </div>
-    <div class="item">
+    <div class="slideItem">
 
     </div>
-    <div class="item">
+    <div class="slideItem">
 
     </div>
-    <div class="item">
+    <div class="slideItem">
 
     </div>
-    <div class="item">
+    <div class="slideItem">
 
     </div>
   </div>
@@ -56,10 +56,10 @@
     var currentItem = 0;
     var items;
 
-    var container = document.querySelector(".container");
+    var container = document.querySelector(".slideContainer");
 
     function setup() {
-      items = document.querySelectorAll(".item");
+      items = document.querySelectorAll(".slideItem");
 
       for (var i = 0; i < items.length; i++) {
         var item = items[i];

@@ -7,7 +7,32 @@
   <link href="css/styles.css" rel="stylesheet" type="text/css">
   <script src="/scripts/handlebars.js"></script>
   <style>
+    .dataArea {
+      width: 600px;
+      background-color: #FFF;
+      margin-top: 15px;
+      position: absolute;
+      display: inline-block;
+      box-shadow: 0px 0px 5px 0px #CCC;
+      transition: all .2s ease-out;
+    }
 
+    .slideContainer {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      transition: transform .2s ease-out;
+    }
+    #content {
+      display: inherit;
+      overflow: hidden;
+      position: relative;
+      width: 690px;
+      height: 600px;
+    }
+    .favorite {
+      display: none;
+    }
   </style>
 </head>
 
@@ -44,49 +69,49 @@
       </div>
 
       <div id="content">
-        <h1>All Builds</h1>
-        <div id="dataViewWrapper" data-datapos="0">
-          <div id="dataViews"></div>
-        </div>
-        <button id="left">👈</button>
-        <button id="right">👉</button>
-      </div>
-  </div>
 
-  <template id="dataContent" >
-    <div class="dataArea">
-      <a class="linkDetails" href="fullDetails.htm">
-        <div class="dataHeader">
-          <h2 class="branchName">RSMAIN</h2>
-          <span class="favorite">⭐</span>
-          <h3 class="buildNumber">16188.0.20170429</h3>
-        </div>
-      </a>
-      <div class="dataContent">
-          <div class="releaseBox">
-            <span>Release Score: </span><span class="releaseValue">184</span>
-          </div>
-          <div class="additionalDetails releaseBox">
-            <div class="cLeft">
-              <p class="hours">100</p>
-              <p class="hotbugs">1</p>
-              <p class="triage">yes</p>
-            </div>
-            <div class="cRight">
-              <p class="warnings">2</p>
-              <p class="arch">x64</p>
-              <p class="passrate">95</p>
-            </div>
-          </div>
       </div>
-      <div class="chart"></div>
-    </div>
-  </template>
 
-  <script src="/scripts/chart.js"></script>
-  <script src="/scripts/autocomplete.js"></script>
-  <script src="/scripts/d3.js"></script>
-  <script src="/scripts/chart.js"></script>
-  <script src="/scripts/index.js"></script>
+
+    <template id="dataContent">
+      <div class="dataArea">
+        <a class="linkDetails" href="fullDetails.htm">
+          <div class="dataHeader">
+            <h2 class="branchName">RSMAIN</h2>
+            <span class="favorite">⭐</span>
+            <h3 class="buildNumber">16188.0.20170429</h3>
+          </div>
+        </a>
+        <div class="dataContent">
+            <div class="releaseBox">
+              <span>Release Score: </span><span class="releaseValue">184</span>
+            </div>
+            <div class="additionalDetails releaseBox">
+              <div class="cLeft">
+                <p class="hours">100</p>
+                <p class="hotbugs">1</p>
+                <p class="triage">yes</p>
+              </div>
+              <div class="cRight">
+                <p class="warnings">2</p>
+                <p class="arch">x64</p>
+                <p class="passrate">95</p>
+              </div>
+            </div>
+        </div>
+        <div class="chart"></div>
+      </div>
+    </template>
+
+    <script src="/scripts/chart.js"></script>
+    <script src="/scripts/autocomplete.js"></script>
+    <script src="/scripts/d3.js"></script>
+    <script src="/scripts/chart.js"></script>
+    <script src="/scripts/index.js"></script>
+
+    <script>
+      
+    </script>
 </body>
+
 </html>

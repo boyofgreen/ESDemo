@@ -3,7 +3,7 @@ var detailedView = false;
 var searchView = false;
 var dataLocation = './data/';
 var dataType = '.json';
-var fileNames = ["17522_fbl_impressive","17521_rsmain","17522_fbl_appx","21677_fbl_ninjacat","950_fbl_chicago"];
+var fileNames = ["21677_fbl_impressive","21677_fbl_appx","21677_rsmain","21677_fbl_ninjacat","950_fbl_chicago"];
 
 // Array of JSON files we want to load
 var jsonFiles = new Array(); //["./data/17522_fbl_impressive.json", "./data/17521_rsmain.json", "./data/17522_fbl_appx.json"];
@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function(){
     {
       addSearchTerm(terms[j]);
     }
-  } 
+  }
 
   if (window.location.pathname == "/index.htm") {
     displayFavorites();
@@ -192,12 +192,17 @@ function transferComplete(evt) {
     //       need to send the parsed data. This is a TODO item that
     //       hasn't been addressed yet.
     //
-    if (detailedView == true) {
+    //if (detailedView == true) {
       createBarChart(clonedElement.querySelector(".chart"), evt.srcElement.dataFile);
-    }
+    //}
     contentElement.appendChild(clonedElement);
 
     setupFavoritesEvents();
+
+    if (window.location.pathname == "/summaryPage.htm") {
+      setupCarousel();
+    }
+
     //updateFavoriteStars();
 }
 
@@ -230,106 +235,185 @@ function updateFavoriteStars() {
   }
 }
 
+var currentItem = 0;
+var items;
 
-//carousel sript
-if(document.getElementById('dataViews')){
-var dataviews = document.getElementById('dataViewWrapper');
+var container = document.querySelector("#content");
 
-var changeFactor = function(dir){
-    var currentValue = Number(dataviews.getAttribute('data-datapos'));
+function setupCarousel() {
+  items = document.querySelectorAll(".dataArea");
 
- if(dir === "lower") {
+  for (var i = 0; i < items.length; i++) {
+    var item = items[i];
 
-  dataviews.setAttribute('data-datapos', (currentValue === 0?0:currentValue-1))
- }else{
-
-  dataviews.setAttribute('data-datapos', (currentValue === 2?2:currentValue+1))
-
- }
- 
+    item.style.transform = "translateX(" + 10 * i + "px)";
+    item.style.zIndex = 1000 - i;
+  }
 }
 
-///listeners
-document.getElementById('left').addEventListener('click', function(){
-  changeFactor('lower')
-})
-document.getElementById('right').addEventListener('click', function(){
-  changeFactor('higher')
-})
+document.body.addEventListener("keydown", navigateCarousel, false);
+document.body.addEventListener("keydown", navigateCarousel, false);
+container.addEventListener("transitionend", transitionDone, false);
 
+function navigateCarousel(e) {
+  var key = e.keyCode;
 
-
-
-
-var mode = 'system';
-function modeSwitch(ev) {
-
-    mode = ev.target.displayText;
+  if (key == 37) {
+    console.log("left key pressed");
+    previousItem();
+  } else if (key == 39) {
+    console.log("right key pressed");
+    nextItem();
+  }
 }
-if (typeof Windows != 'undefined') {
 
-    // Modify System Defaults to Only Show Volume and Next/Prev Track as per guidance.
-    // https://docs.microsoft.com/en-us/windows/uwp/input-and-devices/windows-wheel-interactions
+function transitionDone(e) {
+  if (e.propertyName == "transform") {
+    //console.log(e.target);
+  }
+}
 
+function previousItem() {
+  if (currentItem > 0) {
+    currentItem--;
 
-    //initilize dial
-    var config = Windows.UI.Input.RadialControllerConfiguration.getForCurrentView();
-    config.setDefaultMenuItems([Windows.UI.Input.RadialControllerSystemMenuItemKind.scroll]);
-    var controller = Windows.UI.Input.RadialController.createForCurrentView();
+    var item = items[currentItem];
 
+    var shiftValue = 10 * (currentItem);
 
-    
-    // Add our own item to respond to
-    // var mi = Windows.UI.Input.RadialControllerMenuItem.createFromKnownIcon("Undo/Redo", Windows.UI.Input.RadialControllerMenuKnownIcon.undoRedo);
-    // mi.addEventListener("invoked", modeSwitch);
+    console.log("Shifting left by: " + shiftValue);
 
-    // Add two custom sections for the dial interface
-    // If images do not show on Dial, change path to be absolute
-    var mi2 = Windows.UI.Input.RadialControllerMenuItem.createFromIcon("Page Turns", Windows.Storage.Streams.RandomAccessStreamReference.createFromUri(new Windows.Foundation.Uri("http://127.0.0.1:80/scroll.png")));
-    var mi3 = Windows.UI.Input.RadialControllerMenuItem.createFromIcon("Prep Build", Windows.Storage.Streams.RandomAccessStreamReference.createFromUri(new Windows.Foundation.Uri("http://127.0.0.1:80/button.png")));
-  //push to controler
-    controller.menu.items.push(mi2);
-    controller.menu.items.push(mi3);
+    item.style.transform = "translateX(" + shiftValue + "px)";
+    container.style.transform = "translateX(" + -1 * (10 * (currentItem)) + "px)";
+    item.style.opacity = 1;
 
-    mi2.addEventListener("invoked", modeSwitch);
-    mi3.addEventListener('invoked', modeSwitch);
-  //  controller.menu.items.push(mi);
+  } else {
+    currentItem = 0;
+  }
 
+  //console.log(currentItem);
+}
 
-    controller.addEventListener("buttonclicked", function (e) {
-     if(mode !== 'Prep Build') return
-     document.body.classList.toggle('build');
-    });
+function nextItem() {
+  if (currentItem < items.length - 1) {
+    var item = items[currentItem];
 
-    controller.addEventListener("rotationchanged", function (e) {
-        if(mode !== 'Page Turns') return
-        var changeDirection = e.detail[0].rotationDeltaInDegrees;
-      if(changeDirection < 0){
-        changeFactor('lower')
-      }else{
-        changeFactor('higher')
+    var shiftValue = -1 * 10 * (currentItem + 1);
 
-      }
-      
-      //  log("rotation changed: " + e.detail[0].rotationDeltaInDegrees + " in " + mode);
-    });
- 
+    console.log("Shifting right by: " + shiftValue);
 
+    item.style.transform = "translateX(" + shiftValue + "px)";
+    container.style.transform = "translateX(" + shiftValue + "px)";
+    item.style.opacity = 0;
+
+    currentItem++;
+  } else {
+    currentItem = items.length - 1;
+  }
+
+  //console.log(currentItem);
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-}//end check for last page 
+// //carousel sript
+// if(document.getElementById('dataViews')) {
+// var dataviews = document.getElementById('dataViewWrapper');
+//
+// var changeFactor = function(dir){
+//     var currentValue = Number(dataviews.getAttribute('data-datapos'));
+//
+//  if(dir === "lower") {
+//
+//   dataviews.setAttribute('data-datapos', (currentValue === 0?0:currentValue-1))
+//  }else{
+//
+//   dataviews.setAttribute('data-datapos', (currentValue === 2?2:currentValue+1))
+//
+//  }
+//
+// }
+//
+// ///listeners
+// document.getElementById('left').addEventListener('click', function(){
+//   changeFactor('lower')
+// })
+// document.getElementById('right').addEventListener('click', function(){
+//   changeFactor('higher')
+// })
+//
+//
+//
+//
+//
+// var mode = 'system';
+// function modeSwitch(ev) {
+//
+//     mode = ev.target.displayText;
+// }
+// if (typeof Windows != 'undefined') {
+//
+//     // Modify System Defaults to Only Show Volume and Next/Prev Track as per guidance.
+//     // https://docs.microsoft.com/en-us/windows/uwp/input-and-devices/windows-wheel-interactions
+//
+//
+//     //initilize dial
+//     var config = Windows.UI.Input.RadialControllerConfiguration.getForCurrentView();
+//     config.setDefaultMenuItems([Windows.UI.Input.RadialControllerSystemMenuItemKind.scroll]);
+//     var controller = Windows.UI.Input.RadialController.createForCurrentView();
+//
+//
+//
+//     // Add our own item to respond to
+//     // var mi = Windows.UI.Input.RadialControllerMenuItem.createFromKnownIcon("Undo/Redo", Windows.UI.Input.RadialControllerMenuKnownIcon.undoRedo);
+//     // mi.addEventListener("invoked", modeSwitch);
+//
+//     // Add two custom sections for the dial interface
+//     // If images do not show on Dial, change path to be absolute
+//     var mi2 = Windows.UI.Input.RadialControllerMenuItem.createFromIcon("Page Turns", Windows.Storage.Streams.RandomAccessStreamReference.createFromUri(new Windows.Foundation.Uri("http://127.0.0.1:80/scroll.png")));
+//     var mi3 = Windows.UI.Input.RadialControllerMenuItem.createFromIcon("Prep Build", Windows.Storage.Streams.RandomAccessStreamReference.createFromUri(new Windows.Foundation.Uri("http://127.0.0.1:80/button.png")));
+//   //push to controler
+//     controller.menu.items.push(mi2);
+//     controller.menu.items.push(mi3);
+//
+//     mi2.addEventListener("invoked", modeSwitch);
+//     mi3.addEventListener('invoked', modeSwitch);
+//   //  controller.menu.items.push(mi);
+//
+//
+//     controller.addEventListener("buttonclicked", function (e) {
+//      if(mode !== 'Prep Build') return
+//      document.body.classList.toggle('build');
+//     });
+//
+//     controller.addEventListener("rotationchanged", function (e) {
+//         if(mode !== 'Page Turns') return
+//         var changeDirection = e.detail[0].rotationDeltaInDegrees;
+//       if(changeDirection < 0){
+//         changeFactor('lower')
+//       }else{
+//         changeFactor('higher')
+//
+//       }
+//
+//       //  log("rotation changed: " + e.detail[0].rotationDeltaInDegrees + " in " + mode);
+//     });
+//
+//
+// }
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+// }//end check for last page
