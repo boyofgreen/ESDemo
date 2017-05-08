@@ -23,11 +23,37 @@ function showActivity(index){
     }
     var activity = document.createElement("div");
     activity.setAttribute("class","activity");
+    activity.setAttribute("id","activity" + index);
 
-    var dev = document.createElement("div");
-    dev.textContent = activityData.code[index].dev;
+    var line1 = document.createElement("div");
+
+    var dev = document.createElement("span");
+    dev.setAttribute("class", "dev");
+    dev.innerHTML = "<b>Dev</b>: " + activityData.code[index].dev;
     
-    activity.appendChild(dev);
+    var branch = document.createElement("span");
+    branch.setAttribute("class", "branch");
+    branch.innerHTML = "&nbsp;<b>Branch</b>: " + activityData.code[index].branch;
+
+    line1.appendChild(dev);
+    line1.appendChild(branch);
+
+    var line2 = document.createElement("div");
+
+    var locAdded = document.createElement("span");
+    locAdded.setAttribute("class", "locAdded");
+    locAdded.innerHTML = "<b>loc(+)</b>: " + activityData.code[index].locAdded;
+
+    var locRemoved = document.createElement("span");
+    locRemoved.setAttribute("class", "locRemoved");
+    locRemoved.innerHTML = "&nbsp;<b>loc(-)</b>: " + activityData.code[index].locRemoved;
+    
+    line2.appendChild(locAdded);
+    line2.appendChild(locRemoved);
+
+    activity.appendChild(line1);
+    activity.appendChild(line2);
+
     var list = document.getElementById("activityFeed");
     document.getElementById("activityFeed").insertBefore(activity, list.childNodes[0]);
 
