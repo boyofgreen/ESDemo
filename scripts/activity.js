@@ -13,14 +13,14 @@ function getActivityData(file) {
     xhr.send();
 }
 
+function showActiviy(){
+    
+}
+
 function activityDataTransferComplete(evt){
     activityData = JSON.parse(evt.srcElement.responseText);
 
     showActivity();
-}
-
-function showActiviy(){
-    
 }
 
 document.addEventListener("DOMContentLoaded", function() {

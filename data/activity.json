@@ -1,53 +1,603 @@
 {
     "code": [
-        {
-            "locAdded":34,
-            "locRemoved":2,
-            "branch":"FBL_CHICAGO",
-            "dev":"Kevin",
-            "quality":"low"
-        },
-        {
-            "locAdded":621,
-            "locRemoved":55,
-            "branch":"FBL_NARWHAL",
-            "dev":"John-David",
-            "quality":"high"
-        },
-        {
-            "locAdded":5213,
-            "locRemoved":541,
-            "branch":"FBL_NARWHAL",
-            "dev":"Jeff",
-            "quality":"?"
-        },
-        {
-            "locAdded":212,
-            "locRemoved":23,
-            "branch":"FBL_NARWHAL",
-            "dev":"Melanie",
-            "quality":"high"
-        },
-        {
-            "locAdded":314,
-            "locRemoved":25,
-            "branch":"FBL_NINJACAT",
-            "dev":"Sarita",
-            "quality":"high"
-        },
-        {
-            "locAdded":156,
-            "locRemoved": 34,
-            "branch":"FBL_NINJACAT",
-            "dev":"Shou",
-            "quality":"high"
-        },
-        {
-            "locAdded":267,
-            "locRemoved":15,
-            "branch":"FBL_NINJACAT",
-            "dev":"Zoey",
-            "quality":"high"
-        }
-    ] 
+  {
+    "dev": "Byers Solomon",
+    "branch": "FBL_CHICAGO",
+    "locRemoved": 687,
+    "locAdded": 546
+  },
+  {
+    "dev": "Pearson Mccarthy",
+    "branch": "FBL_CHICAGO",
+    "locRemoved": 977,
+    "locAdded": 242
+  },
+  {
+    "dev": "Sharpe Hays",
+    "branch": "FBL_CHICAGO",
+    "locRemoved": 842,
+    "locAdded": 1561
+  },
+  {
+    "dev": "Good Frank",
+    "branch": "FBL_PUSH_THE_BUTTON",
+    "locRemoved": 725,
+    "locAdded": 1175
+  },
+  {
+    "dev": "Ladonna Armstrong",
+    "branch": "FBL_NINJACAT",
+    "locRemoved": 786,
+    "locAdded": 1649
+  },
+  {
+    "dev": "Minnie Rodriquez",
+    "branch": "FBL_NINJACAT",
+    "locRemoved": 552,
+    "locAdded": 94
+  },
+  {
+    "dev": "Letha Rowe",
+    "branch": "FBL_CHICAGO",
+    "locRemoved": 593,
+    "locAdded": 1005
+  },
+  {
+    "dev": "Ramsey Acosta",
+    "branch": "FBL_PUSH_THE_BUTTON",
+    "locRemoved": 800,
+    "locAdded": 1110
+  },
+  {
+    "dev": "Strickland Serrano",
+    "branch": "FBL_CHICAGO",
+    "locRemoved": 596,
+    "locAdded": 1714
+  },
+  {
+    "dev": "Marcie Vazquez",
+    "branch": "FBL_CHICAGO",
+    "locRemoved": 513,
+    "locAdded": 1886
+  },
+  {
+    "dev": "Nicholson Knowles",
+    "branch": "FBL_PUSH_THE_BUTTON",
+    "locRemoved": 51,
+    "locAdded": 715
+  },
+  {
+    "dev": "French Stewart",
+    "branch": "FBL_CHICAGO",
+    "locRemoved": 75,
+    "locAdded": 822
+  },
+  {
+    "dev": "Chelsea Rojas",
+    "branch": "FBL_PUSH_THE_BUTTON",
+    "locRemoved": 43,
+    "locAdded": 2046
+  },
+  {
+    "dev": "Hale Wilkerson",
+    "branch": "FBL_PUSH_THE_BUTTON",
+    "locRemoved": 361,
+    "locAdded": 162
+  },
+  {
+    "dev": "Jacobson Roman",
+    "branch": "FBL_NINJACAT",
+    "locRemoved": 476,
+    "locAdded": 651
+  },
+  {
+    "dev": "Bentley Berger",
+    "branch": "FBL_PUSH_THE_BUTTON",
+    "locRemoved": 798,
+    "locAdded": 417
+  },
+  {
+    "dev": "Bauer Miles",
+    "branch": "FBL_NARWHOL",
+    "locRemoved": 240,
+    "locAdded": 1412
+  },
+  {
+    "dev": "Lynette Reed",
+    "branch": "FBL_NARWHOL",
+    "locRemoved": 301,
+    "locAdded": 1626
+  },
+  {
+    "dev": "Carrie Webster",
+    "branch": "FBL_NINJACAT",
+    "locRemoved": 338,
+    "locAdded": 1589
+  },
+  {
+    "dev": "Bridges Lynn",
+    "branch": "FBL_NARWHOL",
+    "locRemoved": 610,
+    "locAdded": 1023
+  },
+  {
+    "dev": "Francisca Griffin",
+    "branch": "FBL_PUSH_THE_BUTTON",
+    "locRemoved": 994,
+    "locAdded": 1410
+  },
+  {
+    "dev": "Fischer Richmond",
+    "branch": "FBL_NARWHOL",
+    "locRemoved": 967,
+    "locAdded": 759
+  },
+  {
+    "dev": "Buckley Cain",
+    "branch": "FBL_NINJACAT",
+    "locRemoved": 156,
+    "locAdded": 728
+  },
+  {
+    "dev": "Merritt Mckay",
+    "branch": "FBL_CHICAGO",
+    "locRemoved": 407,
+    "locAdded": 280
+  },
+  {
+    "dev": "Rogers Gardner",
+    "branch": "FBL_PUSH_THE_BUTTON",
+    "locRemoved": 423,
+    "locAdded": 2031
+  },
+  {
+    "dev": "Parsons Aguirre",
+    "branch": "FBL_NARWHOL",
+    "locRemoved": 777,
+    "locAdded": 744
+  },
+  {
+    "dev": "Eleanor Moss",
+    "branch": "FBL_CHICAGO",
+    "locRemoved": 263,
+    "locAdded": 1419
+  },
+  {
+    "dev": "Ines Salazar",
+    "branch": "FBL_NINJACAT",
+    "locRemoved": 738,
+    "locAdded": 1693
+  },
+  {
+    "dev": "Lilian Camacho",
+    "branch": "FBL_CHICAGO",
+    "locRemoved": 443,
+    "locAdded": 1696
+  },
+  {
+    "dev": "Glenn Hamilton",
+    "branch": "FBL_NARWHOL",
+    "locRemoved": 697,
+    "locAdded": 902
+  },
+  {
+    "dev": "Hays Rivera",
+    "branch": "FBL_CHICAGO",
+    "locRemoved": 802,
+    "locAdded": 1358
+  },
+  {
+    "dev": "Luz Hanson",
+    "branch": "FBL_NARWHOL",
+    "locRemoved": 257,
+    "locAdded": 948
+  },
+  {
+    "dev": "Ruby Lucas",
+    "branch": "FBL_NARWHOL",
+    "locRemoved": 512,
+    "locAdded": 603
+  },
+  {
+    "dev": "Winifred Conner",
+    "branch": "FBL_PUSH_THE_BUTTON",
+    "locRemoved": 830,
+    "locAdded": 1034
+  },
+  {
+    "dev": "Shaw Farley",
+    "branch": "FBL_NARWHOL",
+    "locRemoved": 570,
+    "locAdded": 414
+  },
+  {
+    "dev": "Madge Conrad",
+    "branch": "FBL_CHICAGO",
+    "locRemoved": 109,
+    "locAdded": 1431
+  },
+  {
+    "dev": "Roth Donovan",
+    "branch": "FBL_CHICAGO",
+    "locRemoved": 137,
+    "locAdded": 537
+  },
+  {
+    "dev": "Addie Ortiz",
+    "branch": "FBL_CHICAGO",
+    "locRemoved": 911,
+    "locAdded": 1250
+  },
+  {
+    "dev": "Terra Edwards",
+    "branch": "FBL_PUSH_THE_BUTTON",
+    "locRemoved": 407,
+    "locAdded": 509
+  },
+  {
+    "dev": "Curry Norris",
+    "branch": "FBL_CHICAGO",
+    "locRemoved": 723,
+    "locAdded": 179
+  },
+  {
+    "dev": "Davis Dale",
+    "branch": "FBL_PUSH_THE_BUTTON",
+    "locRemoved": 142,
+    "locAdded": 186
+  },
+  {
+    "dev": "Tara Silva",
+    "branch": "FBL_PUSH_THE_BUTTON",
+    "locRemoved": 668,
+    "locAdded": 777
+  },
+  {
+    "dev": "Tracie Miranda",
+    "branch": "FBL_CHICAGO",
+    "locRemoved": 272,
+    "locAdded": 444
+  },
+  {
+    "dev": "Dawn Holden",
+    "branch": "FBL_CHICAGO",
+    "locRemoved": 978,
+    "locAdded": 409
+  },
+  {
+    "dev": "Dunlap Singleton",
+    "branch": "FBL_NINJACAT",
+    "locRemoved": 984,
+    "locAdded": 434
+  },
+  {
+    "dev": "Luann Harmon",
+    "branch": "FBL_CHICAGO",
+    "locRemoved": 175,
+    "locAdded": 278
+  },
+  {
+    "dev": "Susanne Garner",
+    "branch": "FBL_NARWHOL",
+    "locRemoved": 187,
+    "locAdded": 1412
+  },
+  {
+    "dev": "Booth Underwood",
+    "branch": "FBL_NINJACAT",
+    "locRemoved": 642,
+    "locAdded": 1301
+  },
+  {
+    "dev": "Dorsey Pruitt",
+    "branch": "FBL_NARWHOL",
+    "locRemoved": 435,
+    "locAdded": 615
+  },
+  {
+    "dev": "Farley Andrews",
+    "branch": "FBL_CHICAGO",
+    "locRemoved": 824,
+    "locAdded": 825
+  },
+  {
+    "dev": "Jamie Gray",
+    "branch": "FBL_PUSH_THE_BUTTON",
+    "locRemoved": 894,
+    "locAdded": 1338
+  },
+  {
+    "dev": "Munoz Gilliam",
+    "branch": "FBL_NINJACAT",
+    "locRemoved": 598,
+    "locAdded": 1219
+  },
+  {
+    "dev": "Natalia Nolan",
+    "branch": "FBL_NINJACAT",
+    "locRemoved": 390,
+    "locAdded": 707
+  },
+  {
+    "dev": "Horton Soto",
+    "branch": "FBL_NARWHOL",
+    "locRemoved": 891,
+    "locAdded": 642
+  },
+  {
+    "dev": "Carter Watts",
+    "branch": "FBL_CHICAGO",
+    "locRemoved": 177,
+    "locAdded": 1940
+  },
+  {
+    "dev": "Kendra Harper",
+    "branch": "FBL_NINJACAT",
+    "locRemoved": 1017,
+    "locAdded": 1482
+  },
+  {
+    "dev": "Traci Perkins",
+    "branch": "FBL_CHICAGO",
+    "locRemoved": 688,
+    "locAdded": 1940
+  },
+  {
+    "dev": "Holland Bradford",
+    "branch": "FBL_CHICAGO",
+    "locRemoved": 98,
+    "locAdded": 788
+  },
+  {
+    "dev": "Doreen Hardin",
+    "branch": "FBL_CHICAGO",
+    "locRemoved": 63,
+    "locAdded": 1914
+  },
+  {
+    "dev": "Rosario Duffy",
+    "branch": "FBL_NINJACAT",
+    "locRemoved": 377,
+    "locAdded": 1221
+  },
+  {
+    "dev": "Tillman Guzman",
+    "branch": "FBL_CHICAGO",
+    "locRemoved": 879,
+    "locAdded": 68
+  },
+  {
+    "dev": "Robin Todd",
+    "branch": "FBL_NARWHOL",
+    "locRemoved": 561,
+    "locAdded": 474
+  },
+  {
+    "dev": "Jacqueline Barr",
+    "branch": "FBL_PUSH_THE_BUTTON",
+    "locRemoved": 957,
+    "locAdded": 109
+  },
+  {
+    "dev": "Maritza Gallagher",
+    "branch": "FBL_NINJACAT",
+    "locRemoved": 276,
+    "locAdded": 1135
+  },
+  {
+    "dev": "Lucas Taylor",
+    "branch": "FBL_CHICAGO",
+    "locRemoved": 404,
+    "locAdded": 1180
+  },
+  {
+    "dev": "Jensen Vargas",
+    "branch": "FBL_CHICAGO",
+    "locRemoved": 548,
+    "locAdded": 2020
+  },
+  {
+    "dev": "Kara Melton",
+    "branch": "FBL_NINJACAT",
+    "locRemoved": 839,
+    "locAdded": 926
+  },
+  {
+    "dev": "Byrd Nieves",
+    "branch": "FBL_NINJACAT",
+    "locRemoved": 735,
+    "locAdded": 267
+  },
+  {
+    "dev": "Suzanne Aguilar",
+    "branch": "FBL_PUSH_THE_BUTTON",
+    "locRemoved": 176,
+    "locAdded": 1583
+  },
+  {
+    "dev": "Miles Garrison",
+    "branch": "FBL_CHICAGO",
+    "locRemoved": 926,
+    "locAdded": 1046
+  },
+  {
+    "dev": "Latisha Walton",
+    "branch": "FBL_NINJACAT",
+    "locRemoved": 841,
+    "locAdded": 332
+  },
+  {
+    "dev": "Natasha Drake",
+    "branch": "FBL_NINJACAT",
+    "locRemoved": 884,
+    "locAdded": 416
+  },
+  {
+    "dev": "Foley Hayes",
+    "branch": "FBL_NARWHOL",
+    "locRemoved": 647,
+    "locAdded": 547
+  },
+  {
+    "dev": "Bonita Shannon",
+    "branch": "FBL_NARWHOL",
+    "locRemoved": 984,
+    "locAdded": 1304
+  },
+  {
+    "dev": "Brown Stevenson",
+    "branch": "FBL_NINJACAT",
+    "locRemoved": 425,
+    "locAdded": 1745
+  },
+  {
+    "dev": "Nikki Stanton",
+    "branch": "FBL_NINJACAT",
+    "locRemoved": 543,
+    "locAdded": 142
+  },
+  {
+    "dev": "Imelda Hicks",
+    "branch": "FBL_PUSH_THE_BUTTON",
+    "locRemoved": 279,
+    "locAdded": 749
+  },
+  {
+    "dev": "Eaton Rivas",
+    "branch": "FBL_NARWHOL",
+    "locRemoved": 194,
+    "locAdded": 1142
+  },
+  {
+    "dev": "Florence Kim",
+    "branch": "FBL_NARWHOL",
+    "locRemoved": 846,
+    "locAdded": 1331
+  },
+  {
+    "dev": "Darcy Jordan",
+    "branch": "FBL_NARWHOL",
+    "locRemoved": 323,
+    "locAdded": 784
+  },
+  {
+    "dev": "Geraldine Davidson",
+    "branch": "FBL_NARWHOL",
+    "locRemoved": 673,
+    "locAdded": 1132
+  },
+  {
+    "dev": "Erin Doyle",
+    "branch": "FBL_CHICAGO",
+    "locRemoved": 455,
+    "locAdded": 2012
+  },
+  {
+    "dev": "Burnett Pittman",
+    "branch": "FBL_PUSH_THE_BUTTON",
+    "locRemoved": 837,
+    "locAdded": 1710
+  },
+  {
+    "dev": "Etta Petersen",
+    "branch": "FBL_NARWHOL",
+    "locRemoved": 838,
+    "locAdded": 174
+  },
+  {
+    "dev": "Stacy Nunez",
+    "branch": "FBL_NINJACAT",
+    "locRemoved": 805,
+    "locAdded": 1197
+  },
+  {
+    "dev": "Castillo Gillespie",
+    "branch": "FBL_NINJACAT",
+    "locRemoved": 192,
+    "locAdded": 104
+  },
+  {
+    "dev": "Howell Snow",
+    "branch": "FBL_CHICAGO",
+    "locRemoved": 997,
+    "locAdded": 1467
+  },
+  {
+    "dev": "Cohen Shepard",
+    "branch": "FBL_CHICAGO",
+    "locRemoved": 609,
+    "locAdded": 855
+  },
+  {
+    "dev": "Nguyen Vasquez",
+    "branch": "FBL_NARWHOL",
+    "locRemoved": 843,
+    "locAdded": 521
+  },
+  {
+    "dev": "Sofia Bowman",
+    "branch": "FBL_PUSH_THE_BUTTON",
+    "locRemoved": 954,
+    "locAdded": 923
+  },
+  {
+    "dev": "Kirk Mejia",
+    "branch": "FBL_NINJACAT",
+    "locRemoved": 940,
+    "locAdded": 1163
+  },
+  {
+    "dev": "Felecia Bray",
+    "branch": "FBL_NINJACAT",
+    "locRemoved": 443,
+    "locAdded": 1509
+  },
+  {
+    "dev": "Ramos Rutledge",
+    "branch": "FBL_PUSH_THE_BUTTON",
+    "locRemoved": 967,
+    "locAdded": 661
+  },
+  {
+    "dev": "Chavez Owens",
+    "branch": "FBL_NINJACAT",
+    "locRemoved": 304,
+    "locAdded": 2024
+  },
+  {
+    "dev": "Albert Tillman",
+    "branch": "FBL_CHICAGO",
+    "locRemoved": 373,
+    "locAdded": 1426
+  },
+  {
+    "dev": "Vang Mcclure",
+    "branch": "FBL_CHICAGO",
+    "locRemoved": 952,
+    "locAdded": 1098
+  },
+  {
+    "dev": "Buchanan Crane",
+    "branch": "FBL_CHICAGO",
+    "locRemoved": 109,
+    "locAdded": 1828
+  },
+  {
+    "dev": "Lawson Conley",
+    "branch": "FBL_NARWHOL",
+    "locRemoved": 646,
+    "locAdded": 673
+  },
+  {
+    "dev": "Mavis Pugh",
+    "branch": "FBL_NARWHOL",
+    "locRemoved": 833,
+    "locAdded": 1570
+  },
+  {
+    "dev": "Ellis Berg",
+    "branch": "FBL_CHICAGO",
+    "locRemoved": 447,
+    "locAdded": 358
+  }]
 }
