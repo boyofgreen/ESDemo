@@ -13,15 +13,34 @@ function getActivityData(file) {
     xhr.send();
 }
 
-function showActiviy(){
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function showActivity(index){
+    if(index == activityData.code.length - 1) {
+        index = 0;
+    }
+    var activity = document.createElement("div");
+    activity.setAttribute("class","activity");
+
+    var dev = document.createElement("div");
+    dev.textContent = activityData.code[index].dev;
     
+    activity.appendChild(dev);
+    var list = document.getElementById("activityFeed");
+    document.getElementById("activityFeed").insertBefore(activity, list.childNodes[0]);
+
+    setTimeout(showActivity,getRandomInt(3000,6000),index+1);
 }
 
 function activityDataTransferComplete(evt){
     activityData = JSON.parse(evt.srcElement.responseText);
 
-    showActivity();
+    setTimeout(showActivity,1000,0);
 }
+
+
 
 document.addEventListener("DOMContentLoaded", function() {
     //Load Activity Data
