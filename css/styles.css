@@ -324,7 +324,7 @@ body.build{
 
 #activityFeed {
   height: 400px;
-  overflow: none;
+  overflow: hidden;
   min-width: 300px;
   border: solid 1px red;
   float: left;
