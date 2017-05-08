@@ -1,11 +1,21 @@
 var CACHE = 'cache-and-update';
 self.addEventListener('install', function(evt) {
   console.log('The service worker is being installed.');
-  evt.waitUntil(precache());
+  evt.waitUntil(precache().then(function() {
+    console.log('[ServiceWorker] Skip waiting on install');
+      return self.skipWaiting();
+
+  })
+  );
 });
 
 
-//
+//allow sw to control of current page
+self.addEventListener('activate', function(event) {
+console.log('[ServiceWorker] Claiming clients for current page');
+      return self.clients.claim();
+
+});
 
 self.addEventListener('fetch', function(evt) {
   console.log('The service worker is serving the asset.'+ evt.request.url);
@@ -21,11 +31,11 @@ function precache() {
       '/fullDetails.htm',
       '/searchREsults.htm',
       '/summaryPage.htm',
-      '/data/data.json',
-      '/data/data0.json',
-      '/data/data1.json',
-      '/css/FullMDL2.ttf',
-      '/css/FullMDL2.woff',
+      '/data/950_fbl_chicago.json',
+      '/data/21677_fbl_appx.json',
+      '/data/21677_fbl_impressive.json',
+      '/data/21677_fbl_ninjacat.json',
+      '/data/21677_rsmain.json',
       '/css/styles.css',
       '/scripts/index.js',
       '/scripts/chart.js',
