@@ -57,7 +57,7 @@ function showActivity(index){
     var list = document.getElementById("activityFeed");
     document.getElementById("activityFeed").insertBefore(activity, list.childNodes[0]);
 
-    setTimeout(showActivity,getRandomInt(3000,6000),index+1);
+    setTimeout(showActivity,getRandomInt(3000,12000),index+1);
 }
 
 function activityDataTransferComplete(evt){
