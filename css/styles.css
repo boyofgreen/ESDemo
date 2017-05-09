@@ -306,6 +306,7 @@ transform: translateX(-80%)
   transition: background-color .1s ease-in;
   xborder-radius: 5px;
   height: 150px;
+  font-family: "Segoe UI",sans-serif;
 
 }
 #left:hover, #right:hover {
