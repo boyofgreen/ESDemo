@@ -1,7 +1,7 @@
 {
     "builds": [{
         "branch" : {
-            "name" : "FBL_APPX",
+            "name" : "FBL_UNICORN",
             "file" : "21677_fbl_appx"
         },
         "build" : {

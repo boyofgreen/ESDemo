@@ -1,7 +1,7 @@
 {
     "builds": [{
         "branch" : {
-            "name" : "FBL_CHICAGO",
+            "name" : "FBL_NARWHAL",
             "file" : "950_fbl_chicago"
         },
         "build" : {
