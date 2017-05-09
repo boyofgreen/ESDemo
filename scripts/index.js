@@ -296,8 +296,8 @@ if (typeof Windows != 'undefined') {
 
     // Add two custom sections for the dial interface
     // If images do not show on Dial, change path to be absolute
-    var mi2 = Windows.UI.Input.RadialControllerMenuItem.createFromIcon("Review Builds", Windows.Storage.Streams.RandomAccessStreamReference.createFromUri(new Windows.Foundation.Uri("http://127.0.0.1:80/scroll.png")));
-    var mi3 = Windows.UI.Input.RadialControllerMenuItem.createFromIcon("Release", Windows.Storage.Streams.RandomAccessStreamReference.createFromUri(new Windows.Foundation.Uri("http://127.0.0.1:80/button.png")));
+    var mi2 = Windows.UI.Input.RadialControllerMenuItem.createFromIcon("Review Builds", Windows.Storage.Streams.RandomAccessStreamReference.createFromUri(new Windows.Foundation.Uri("https://es-tracker.azurewebsites.net/images/gear2.png")));
+    var mi3 = Windows.UI.Input.RadialControllerMenuItem.createFromIcon("Release", Windows.Storage.Streams.RandomAccessStreamReference.createFromUri(new Windows.Foundation.Uri("https://es-tracker.azurewebsites.net/images/gear1.png")));
   //push to controler
     controller.menu.items.push(mi2);
     controller.menu.items.push(mi3);
