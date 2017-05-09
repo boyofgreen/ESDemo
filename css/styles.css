@@ -76,6 +76,7 @@ body {
 }
 #container {
   display: flex;
+
 }
 #container h1 {
   font-family: "Segoe UI", sans-serfif;
@@ -85,6 +86,8 @@ body {
 }
 #content {
   padding: 10px;
+  flex-grow: 2;
+
 }
 #sidebar li {
   list-style: none;
@@ -240,12 +243,18 @@ form {
 
 #dataViewWrapper {
 
-width: 500px;
+width: 1000px;
 overflow:hidden;
+display: flex;
+flex-wrap: nowrap;
 
 }
+#dataViews .linkDetails{
+  width: 1000px;
+  display: block;
+}
 #dataViews {
-  width: 1500px;
+  width: 500%;
   display: flex;
 flex-wrap: nowrap;
 transition-property: transform;
@@ -254,34 +263,68 @@ transform: translateX(0)
 }
 #dataViews .dataArea{
   margin: 0;
+  display: flex;
+  flex-direction: column;
 }
+.dataContainer{
+  display: flex;
+  align-content: space-between;
+  align-items:stretch;
+  justify-content: space-between;
 
+}
 #dataViewWrapper[data-datapos = "1"] #dataViews{
 
-transform: translateX(-33.33%)
+transform: translateX(-20%)
 
 }
 #dataViewWrapper[data-datapos = "2"] #dataViews{
 
-transform: translateX(-66.666%)
+transform: translateX(-40%)
+
+}
+#dataViewWrapper[data-datapos = "3"] #dataViews{
+
+transform: translateX(-60%)
+
+}
+#dataViewWrapper[data-datapos = "4"] #dataViews{
+
+transform: translateX(-80%)
 
 }
 
-body.build{
-  background-color: red;
-}
+
 
 #left, #right {
-  background-color: transparent;
+  background-color: #ccc;
+  color: white;
   border: none;
   font-size: 24px;
-  padding-bottom: 10px;
+  padding: 15px;
   margin: 10px;
   transition: background-color .1s ease-in;
-  border-radius: 5px;
+  xborder-radius: 5px;
+  height: 150px;
+
 }
 #left:hover, #right:hover {
   background-color: #FFF;
+  color: #ccc;
+}
+.buttonContainer{
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px;
+}
+.sendBuild{
+  width: 150px;
+  height: 60px;
+  color: white;
+  background-color: #106ebe;;
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 0;
 }
 
 .autolistContainer {
@@ -354,4 +397,55 @@ body.build{
 
 .locRemoved {
   color: red;
+}
+
+
+  /* The Modal (background) */
+#modal {
+    display: flex; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 21; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: hidden; /* Enable scroll if needed */
+    xbackground-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.5); /* Black w/ opacity */
+   
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    }
+
+
+/* Modal Content/Box */
+#modalContent {
+    background-color: #fefefe;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    display: flex;
+    height: 400px;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    font-family: "Segoe UI",sans-serif;
+
+
+    flex-direction: column;
+}
+.brb {
+  width: 300px;
+  height: 300px;
+  background-image: url(../images/brb.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.build .brb {
+  background-image: url(../images/brbg.png)
+}
+
+#modal.hidden{
+  display: none;
 }

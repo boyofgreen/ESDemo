@@ -8,13 +8,14 @@
   <script src="/scripts/handlebars.js"></script>
   <style>
     .dataArea {
-      width: 600px;
+      width: 20%;
       background-color: #FFF;
       margin-top: 15px;
-      position: absolute;
-      display: inline-block;
+      xposition: absolute;
+      xdisplay: inline-block;
       box-shadow: 0px 0px 5px 0px #CCC;
       transition: all .2s ease-out;
+      
     }
 
     .slideContainer {
@@ -24,11 +25,10 @@
       transition: transform .2s ease-out;
     }
     #content {
-      display: inherit;
-      overflow: hidden;
-      position: relative;
-      width: 690px;
-      height: 600px;
+      display: flex;
+      padding:0;
+      xheight: 600px;
+      align-items: center;
     }
     .favorite {
       display: none;
@@ -69,7 +69,12 @@
       </div>
 
       <div id="content">
-
+        <button id="left"> < </button>
+        <div id="dataViewWrapper">
+          <div id="dataViews"></div>
+        </div>
+        
+        <button id="right"> > </button>
       </div>
 
 
@@ -99,9 +104,27 @@
               </div>
             </div>
         </div>
-        <div class="chart"></div>
+        <div class="dataContainer">
+          <div class="chart"></div>
+          <div class="screenShots">
+            <img src="images/screen1.png" />
+            <p>Test Run 1001</p>
+            
+          </div>
+        </div>
+        <div class="buttonContainer"><button class="sendBuild">launch build</button>
+        </div>
       </div>
     </template>
+
+    <div id="modal" class="hidden">
+      <div id="modalContent">
+        <h2>Ready to release build?</h2>
+        <div class="brb"></div>
+        <p>don't control the big red button? <a href="#" class="cancelbrb">cancel</a></p>
+        
+      </div>
+    </div>
 
     <script src="/scripts/chart.js"></script>
     <script src="/scripts/autocomplete.js"></script>

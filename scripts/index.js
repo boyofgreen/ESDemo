@@ -199,9 +199,9 @@ function transferComplete(evt) {
 
     setupFavoritesEvents();
 
-    if (window.location.pathname == "/summaryPage.htm") {
-      setupCarousel();
-    }
+    // if (window.location.pathname == "/summaryPage.htm") {
+    //   setupCarousel();
+    // }
 
     //updateFavoriteStars();
 }
@@ -240,166 +240,117 @@ var items;
 
 var container = document.querySelector("#content");
 
-function setupCarousel() {
-  items = document.querySelectorAll(".dataArea");
 
-  for (var i = 0; i < items.length; i++) {
-    var item = items[i];
 
-    item.style.transform = "translateX(" + 10 * i + "px)";
-    item.style.zIndex = 1000 - i;
-  }
+//carousel sript
+if(document.getElementById('dataViews')) {
+var dataviews = document.getElementById('dataViewWrapper');
+
+var changeFactor = function(dir){
+    var currentValue = Number(dataviews.getAttribute('data-datapos'));
+
+ if(dir === "lower") {
+
+  dataviews.setAttribute('data-datapos', (currentValue === 0?0:currentValue-1))
+ }else{
+
+  dataviews.setAttribute('data-datapos', (currentValue === 4?4:currentValue+1))
+
+ }
+
 }
 
-document.body.addEventListener("keydown", navigateCarousel, false);
-document.body.addEventListener("keydown", navigateCarousel, false);
-container.addEventListener("transitionend", transitionDone, false);
+///listeners
+document.getElementById('left').addEventListener('click', function(){
+  changeFactor('lower')
+})
+document.getElementById('right').addEventListener('click', function(){
+  changeFactor('higher')
+})
 
-function navigateCarousel(e) {
-  var key = e.keyCode;
 
-  if (key == 37) {
-    console.log("left key pressed");
-    previousItem();
-  } else if (key == 39) {
-    console.log("right key pressed");
-    nextItem();
-  }
+
+
+
+var mode = 'system';
+function modeSwitch(ev) {
+
+    mode = ev.target.displayText;
+}
+if (typeof Windows != 'undefined') {
+
+    // Modify System Defaults to Only Show Volume and Next/Prev Track as per guidance.
+    // https://docs.microsoft.com/en-us/windows/uwp/input-and-devices/windows-wheel-interactions
+
+
+    //initilize dial
+    var config = Windows.UI.Input.RadialControllerConfiguration.getForCurrentView();
+    config.setDefaultMenuItems([Windows.UI.Input.RadialControllerSystemMenuItemKind.scroll]);
+    var controller = Windows.UI.Input.RadialController.createForCurrentView();
+
+
+
+    // Add our own item to respond to
+    // var mi = Windows.UI.Input.RadialControllerMenuItem.createFromKnownIcon("Undo/Redo", Windows.UI.Input.RadialControllerMenuKnownIcon.undoRedo);
+    // mi.addEventListener("invoked", modeSwitch);
+
+    // Add two custom sections for the dial interface
+    // If images do not show on Dial, change path to be absolute
+    var mi2 = Windows.UI.Input.RadialControllerMenuItem.createFromIcon("Review Builds", Windows.Storage.Streams.RandomAccessStreamReference.createFromUri(new Windows.Foundation.Uri("http://127.0.0.1:80/scroll.png")));
+    var mi3 = Windows.UI.Input.RadialControllerMenuItem.createFromIcon("Release", Windows.Storage.Streams.RandomAccessStreamReference.createFromUri(new Windows.Foundation.Uri("http://127.0.0.1:80/button.png")));
+  //push to controler
+    controller.menu.items.push(mi2);
+    controller.menu.items.push(mi3);
+
+    mi2.addEventListener("invoked", modeSwitch);
+    mi3.addEventListener('invoked', modeSwitch);
+  //  controller.menu.items.push(mi);
+
+
+    controller.addEventListener("buttonclicked", function (e) {
+     if(mode !== 'Release') return
+     document.body.classList.toggle('build');
+    });
+
+    controller.addEventListener("rotationchanged", function (e) {
+        if(mode !== 'Review Builds') return
+        var changeDirection = e.detail[0].rotationDeltaInDegrees;
+      if(changeDirection < 0){
+        changeFactor('lower')
+      }else{
+        changeFactor('higher')
+
+      }
+
+      //  log("rotation changed: " + e.detail[0].rotationDeltaInDegrees + " in " + mode);
+    });
+
+
+
+
+
+
 }
 
-function transitionDone(e) {
-  if (e.propertyName == "transform") {
-    //console.log(e.target);
-  }
+//
+///brb code
+
+document.querySelector('.cancelbrb').addEventListener('click', function(){
+  document.querySelector('#modal').classList.toggle('hidden')
+})
+
+
+setTimeout(function(){
+var sendbuttons = document.querySelectorAll('.sendBuild');
+
+for(var i = 0; i < sendbuttons.length;i++){
+sendbuttons[i].addEventListener('click', function(){
+    document.querySelector('#modal').classList.toggle('hidden')
+})
+
 }
 
-function previousItem() {
-  if (currentItem > 0) {
-    currentItem--;
-
-    var item = items[currentItem];
-
-    var shiftValue = 10 * (currentItem);
-
-    console.log("Shifting left by: " + shiftValue);
-
-    item.style.transform = "translateX(" + shiftValue + "px)";
-    container.style.transform = "translateX(" + -1 * (10 * (currentItem)) + "px)";
-    item.style.opacity = 1;
-
-  } else {
-    currentItem = 0;
-  }
-
-  //console.log(currentItem);
-}
-
-function nextItem() {
-  if (currentItem < items.length - 1) {
-    var item = items[currentItem];
-
-    var shiftValue = -1 * 10 * (currentItem + 1);
-
-    console.log("Shifting right by: " + shiftValue);
-
-    item.style.transform = "translateX(" + shiftValue + "px)";
-    container.style.transform = "translateX(" + shiftValue + "px)";
-    item.style.opacity = 0;
-
-    currentItem++;
-  } else {
-    currentItem = items.length - 1;
-  }
-
-  //console.log(currentItem);
-}
-
-
-// //carousel sript
-// if(document.getElementById('dataViews')) {
-// var dataviews = document.getElementById('dataViewWrapper');
-//
-// var changeFactor = function(dir){
-//     var currentValue = Number(dataviews.getAttribute('data-datapos'));
-//
-//  if(dir === "lower") {
-//
-//   dataviews.setAttribute('data-datapos', (currentValue === 0?0:currentValue-1))
-//  }else{
-//
-//   dataviews.setAttribute('data-datapos', (currentValue === 2?2:currentValue+1))
-//
-//  }
-//
-// }
-//
-// ///listeners
-// document.getElementById('left').addEventListener('click', function(){
-//   changeFactor('lower')
-// })
-// document.getElementById('right').addEventListener('click', function(){
-//   changeFactor('higher')
-// })
-//
-//
-//
-//
-//
-// var mode = 'system';
-// function modeSwitch(ev) {
-//
-//     mode = ev.target.displayText;
-// }
-// if (typeof Windows != 'undefined') {
-//
-//     // Modify System Defaults to Only Show Volume and Next/Prev Track as per guidance.
-//     // https://docs.microsoft.com/en-us/windows/uwp/input-and-devices/windows-wheel-interactions
-//
-//
-//     //initilize dial
-//     var config = Windows.UI.Input.RadialControllerConfiguration.getForCurrentView();
-//     config.setDefaultMenuItems([Windows.UI.Input.RadialControllerSystemMenuItemKind.scroll]);
-//     var controller = Windows.UI.Input.RadialController.createForCurrentView();
-//
-//
-//
-//     // Add our own item to respond to
-//     // var mi = Windows.UI.Input.RadialControllerMenuItem.createFromKnownIcon("Undo/Redo", Windows.UI.Input.RadialControllerMenuKnownIcon.undoRedo);
-//     // mi.addEventListener("invoked", modeSwitch);
-//
-//     // Add two custom sections for the dial interface
-//     // If images do not show on Dial, change path to be absolute
-//     var mi2 = Windows.UI.Input.RadialControllerMenuItem.createFromIcon("Page Turns", Windows.Storage.Streams.RandomAccessStreamReference.createFromUri(new Windows.Foundation.Uri("http://127.0.0.1:80/scroll.png")));
-//     var mi3 = Windows.UI.Input.RadialControllerMenuItem.createFromIcon("Prep Build", Windows.Storage.Streams.RandomAccessStreamReference.createFromUri(new Windows.Foundation.Uri("http://127.0.0.1:80/button.png")));
-//   //push to controler
-//     controller.menu.items.push(mi2);
-//     controller.menu.items.push(mi3);
-//
-//     mi2.addEventListener("invoked", modeSwitch);
-//     mi3.addEventListener('invoked', modeSwitch);
-//   //  controller.menu.items.push(mi);
-//
-//
-//     controller.addEventListener("buttonclicked", function (e) {
-//      if(mode !== 'Prep Build') return
-//      document.body.classList.toggle('build');
-//     });
-//
-//     controller.addEventListener("rotationchanged", function (e) {
-//         if(mode !== 'Page Turns') return
-//         var changeDirection = e.detail[0].rotationDeltaInDegrees;
-//       if(changeDirection < 0){
-//         changeFactor('lower')
-//       }else{
-//         changeFactor('higher')
-//
-//       }
-//
-//       //  log("rotation changed: " + e.detail[0].rotationDeltaInDegrees + " in " + mode);
-//     });
-//
-//
-// }
+}, 2000)
 //
 //
 //
@@ -414,6 +365,4 @@ function nextItem() {
 //
 //
 //
-//
-//
-// }//end check for last page
+ }//end check for last page
