@@ -10,13 +10,7 @@ var jsonFiles = new Array(); //["./data/17522_fbl_impressive.json", "./data/1752
 
 document.addEventListener("DOMContentLoaded", function(){
 
-  var ttme = 800;
-if (window.location.pathname.match('index')) ttme = 200;
-if (window.location.pathname.match('searchResults')) ttme = 200;
-if (window.location.pathname.match('fullDetails')) ttme = 200;
 
-  
-  setTimeout(function(){
 
   for(i = 0; i < fileNames.length; i++){
     jsonFiles.push(dataLocation + fileNames[i] + dataType);
@@ -58,7 +52,7 @@ if (window.location.pathname.match('fullDetails')) ttme = 200;
     searchView = false;
     detailedView = false;
   }
-  }, ttme)
+
 });
 
 // Identify which JSON files contain the data we are looking for!
