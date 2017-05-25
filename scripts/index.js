@@ -182,7 +182,7 @@ function transferComplete(evt) {
     }
 
 
-    clonedElement.querySelector(".releaseValue").innerText = buildData.builds[0].build.releaseScore;
+    clonedElement.querySelector(".releaseValue").innerText = buildData.builds[0].build.releaseScoreBottom + '-' + buildData.builds[0].build.releaseScore;
     clonedElement.querySelector(".hours").innerText = buildData.builds[0].build.hours;
     clonedElement.querySelector(".hotbugs").innerText = buildData.builds[0].build.hotbugs;
     clonedElement.querySelector(".triage").innerText = buildData.builds[0].build.triage;
@@ -199,7 +199,7 @@ function transferComplete(evt) {
      // createBarChart(clonedElement.querySelector(".chart"), evt.srcElement.dataFile);
     //}
 
-    
+
 
     if(window.location.href.match('index')) contentElement = document.getElementById('savedItems')
 

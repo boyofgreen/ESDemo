@@ -13,6 +13,7 @@
             "platform" : "x64fre",
             "status" : "building",
             "releaseScore" : 87.9,
+            "releaseScoreBottom" : 62.1,
             "hours" : 100,
             "hotbugs" : 3,
             "triage" : "done",

@@ -13,6 +13,7 @@
             "platform" : "x86fre",
             "status" : "good",
             "releaseScore" : 94.2,
+            "releaseScoreBottom" : 57.5,
             "hours" : 100,
             "hotbugs" : 3,
             "triage" : "done",
