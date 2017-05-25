@@ -78,11 +78,14 @@ body {
   display: flex;
 
 }
-#container h1 {
+#container h1, h2 {
   font-family: "Segoe UI", sans-serfif;
   font-weight: 100;
   margin-top: 10px;
   margin-left: 15px;
+}
+h2{
+
 }
 #content {
   padding: 10px;
@@ -450,3 +453,33 @@ transform: translateX(-80%)
 #modal.hidden{
   display: none;
 }
+
+/*content on main page */
+
+.index #content{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+}
+.index #content>div {
+  border: 1px solid lightblue;
+  width: 350px;
+  margin: 10px;
+}
+#savedItems .dataArea{
+  width: 320px;
+  min-width:320px;
+  margin-top:0;
+
+}
+#savedItems{
+ display: flex;
+ flex-direction: column;  
+ height: 400px;
+ xoverflow-y: scroll;
+ xoverflow-x:hidden;
+ 
+
+}
+#content #currentRings { width: 720px;}

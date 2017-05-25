@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function(){
     }
   }
 
-  if (window.location.pathname == "/index.htm") {
+  if (window.location.pathname == "/index.html") {
     displayFavorites();
 
     searchView = false;
@@ -196,8 +196,13 @@ function transferComplete(evt) {
     //       hasn't been addressed yet.
     //
     //if (detailedView == true) {
-      createBarChart(clonedElement.querySelector(".chart"), evt.srcElement.dataFile);
+     // createBarChart(clonedElement.querySelector(".chart"), evt.srcElement.dataFile);
     //}
+
+    
+
+    if(window.location.href.match('index')) contentElement = document.getElementById('savedItems')
+
     contentElement.appendChild(clonedElement);
 
     setupFavoritesEvents();

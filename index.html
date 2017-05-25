@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <title>ES Build Tracker</title>
   <script>
+  if(navigator.servicWorker){
     navigator.serviceWorker.register('serviceworker.js', {
       scope: '.'
     }).then(function(registration) {
@@ -12,6 +13,7 @@
                 console.log('The service worker has been registered ', registration);
 
 });
+  }
   </script>
   <link href="css/styles.css" rel="stylesheet" type="text/css">
 
@@ -42,10 +44,10 @@
   </style>
 </head>
 
-<body>
+<body class="index">
   <div id="mainBody">
     <header id="header">
-      <a href="index.htm">
+      <a href="index.html">
         <div id="titleArea">
           <span id="mainIcon"></span>
           <h1>Engineering System</h1>
@@ -75,7 +77,29 @@
       </div>
 
       <div id="content">
-        <h1>Favorites</h1>
+        <div id="savedItems"><h2>Watched Builds</h2></div>
+        <div id="buildsOverTime">
+          <h2>Builds Over Time</h2>
+          <canvas id="chartOverTime" width="320" height="320"></canvas>
+        </div>
+        <div id="deploysByBranch">
+          <h2>Deploys by Branch</h2>
+          <canvas id="chartDeploys" width="320" height="320"></canvas>
+        </div>
+        <div id="highestScores">
+        <h2>Builds By Score</h2>
+        <canvas id="chartScore" width="320" height="320"></canvas>
+
+        </div>
+        <div id="currentRings">
+        <h2>Branches by Score</h2>
+          <canvas id="chartBrRating" width="640" height="320"></canvas>
+
+
+
+
+        </div>
+
       
       </div>
       
@@ -91,11 +115,11 @@
           <h3 class="buildNumber">16188.0.20170429</h3>
         </div>
       </a>
-      <div class="dataContent">
+      <div class="dataContent" style="display: none">
           <div class="releaseBox">
             <span>Release Score: </span><span class="releaseValue">184</span>
           </div>
-          <div class="additionalDetails releaseBox">
+          <div class="additionalDetails releaseBox" style="display: none">
             <div class="cLeft">
               <p class="hours">100</p>
               <p class="hotbugs">1</p>
@@ -108,16 +132,18 @@
             </div>
           </div>
       </div>
-      <div class="chart"></div>
+      <div class="chart" style="display: none"></div>
     </div>
     
   </template>
 
   <script src="/scripts/activity.js"></script>
   <script src="/scripts/autocomplete.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.bundle.min.js"></script>
   <script src="/scripts/d3.js"></script>
   <script src="/scripts/chart.js"></script>
   <script src="/scripts/index.js"></script>
+  <script src="/scripts/dashboard.js"></script>
 
 </body>
 

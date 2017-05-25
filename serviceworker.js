@@ -27,7 +27,7 @@ self.addEventListener('fetch', function(evt) {
 function precache() {
   return caches.open(CACHE).then(function (cache) {
     return cache.addAll([
-      '/index.htm',
+      '/index.html',
       '/fullDetails.htm',
       '/searchREsults.htm',
       '/summaryPage.htm',
