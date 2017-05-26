@@ -428,7 +428,7 @@ transform: translateX(-80%)
     overflow: hidden; /* Enable scroll if needed */
     xbackground-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.5); /* Black w/ opacity */
-   
+    transition-property: background;
     align-content: center;
     justify-content: center;
     align-items: center;
@@ -459,7 +459,7 @@ transform: translateX(-80%)
 }
 
 .build .brb {
-  background-image: url(../images/brbg.png)
+  xbackground-image: url(../images/brbg.png)
 }
 
 #modal.hidden{
@@ -580,3 +580,24 @@ select {
    flex-direction: column;
    justify-content: center;
    align-items: center}
+
+
+    .build #modal{
+      transition-duration: 2s;
+      background-color: rgba(255,255,255,0.9);
+    }
+
+    #animate {
+      position: absolute;
+      transform: translateX(-400px);
+      top: 400px;
+      transition-property:transform;
+      left: 0;
+    }
+
+    .build #animate{
+      transition-delay: 1s;
+      transform: translateX(600px);
+      transition-duration: 10s;
+
+    }
