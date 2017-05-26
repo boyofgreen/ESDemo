@@ -25,10 +25,10 @@
       transition: transform .2s ease-out;
     }
     #content {
-      display: flex;
+      /*display: flex;
       padding:0;
       xheight: 600px;
-      align-items: center;
+      align-items: center;*/
     }
     .favorite {
       display: none;
@@ -58,6 +58,7 @@
     <div id="searchAutoComplete"></div>
 
     <div id="container">
+      
       <div id="sidebar">
         <ul>
           <li class="branches">Branches</li>
@@ -69,12 +70,15 @@
       </div>
 
       <div id="content">
-        <button id="left"> &#60; </button>
-        <div id="dataViewWrapper">
-          <div id="dataViews"></div>
+        <h2>BUILD REVIEW</h2>
+        <div id="buildContent">
+          <button id="left"> &#60; </button>
+          <div id="dataViewWrapper">
+            <div id="dataViews"></div>
+          </div>
+          
+          <button id="right"> &#62; </button>
         </div>
-        
-        <button id="right"> &#62; </button>
       </div>
 
 
@@ -82,7 +86,7 @@
       <div class="dataArea">
         <a class="linkDetails" href="fullDetails.htm">
           <div class="dataHeader">
-            <h2 class="branchName">RSMAIN</h2>
+            <h2 class="branchName" style="display:none">RSMAIN</h2>
             <span class="favorite">⭐</span>
             <h3 class="buildNumber">16188.0.20170429</h3>
           </div>
@@ -96,21 +100,33 @@
                 <p class="hours">100</p>
                 <p class="hotbugs">1</p>
                 <p class="triage">yes</p>
+                <p><a href="#">review bugs</a></p>
               </div>
               <div class="cRight">
                 <p class="warnings">2</p>
                 <p class="arch">x64</p>
                 <p class="passrate">95</p>
+                <p><a href="#">list featres</a></p>
+              </div>
+              <div class="screenShots">
+                <img src="images/screen1.png" />
+                <p>dev test</p>
+              </div>
+              <div class="screenShots">
+                <img src="images/screen1.png" />
+                <p>merge run x1</p>
+              </div>
+            <div class="screenShots">
+                <img src="images/screen1.png" />
+                <p>merge run x2</p>
               </div>
             </div>
         </div>
         <div class="dataContainer">
-          <div class="chart"></div>
-          <div class="screenShots">
-            <img src="images/screen1.png" />
-            <p>Test Run 1001</p>
-            
+          <div class="chart">
+                <canvas class="canvas" height="320" width="850"></canvas>
           </div>
+          
         </div>
         <div class="buttonContainer"><button class="sendBuild">launch build</button>
         </div>
@@ -125,8 +141,8 @@
         
       </div>
     </div>
-
-    <script src="/scripts/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.bundle.min.js"></script>
+    <script src="/scripts/buildReview.js"></script>
     <script src="/scripts/autocomplete.js"></script>
     <script src="/scripts/d3.js"></script>
     <script src="/scripts/chart.js"></script>

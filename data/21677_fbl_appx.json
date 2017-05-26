@@ -19,7 +19,8 @@
             "triage" : "done",
             "warnings" : 4,
             "passrate" : "99.2%",
-            "display" : "21677.0.20170510"
+            "display" : "22008.1.20170510",
+            "chartData":[50, 30, 30, 50, 42, 61, 87.9]
         },
         "health" : {
             "totalUniqueInsiders" : 852672,
