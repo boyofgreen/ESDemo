@@ -59,18 +59,18 @@ if (typeof Windows != 'undefined') {
 }
 
 
-var sendOffRelease = function(){
-makeRelease();
-     document.body.classList.toggle('build');
+        var sendOffRelease = function(){
+        makeRelease();
+            document.body.classList.toggle('build');
 
 
-}
+        }
 
-document.addEventListener("keydown", function(e){
-if(e.keyCode === 66){
-sendOffRelease()
+        document.addEventListener("keydown", function(e){
+        if(e.keyCode === 66){
+        sendOffRelease()
 
-}
+        }
 
 
-}); 
+        }); 

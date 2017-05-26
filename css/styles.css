@@ -589,7 +589,7 @@ select {
 
     #animate {
       position: absolute;
-      transform: translateX(-400px);
+      transform: translateX(-600px);
       top: 400px;
       transition-property:transform;
       left: 0;
@@ -600,4 +600,12 @@ select {
       transform: translateX(600px);
       transition-duration: 10s;
 
+    }
+
+    #bubbleText {
+      font-family: Consolas;
+      font-size: 1.3em;
+      transform: translate(125px, 55px);
+      position: relative;
+      z-index: 100;
     }

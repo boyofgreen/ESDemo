@@ -293,7 +293,8 @@ var makeRelease = function(){
         setTimeout(function(){
 
           document.getElementById('releaseStatus').innerHTML = "Release sent </br> Enjoy your new build!"
-        },4500)
+          document.getElementById('bubbleText').innerHTML = "Release sent </br> Enjoy your new build!"
+       },6500)
 
 
 }
@@ -303,7 +304,6 @@ var makeRelease = function(){
 
     document.querySelector('.cancelbrb').addEventListener('click', function(){
       document.querySelector('#modal').classList.toggle('hidden')
-      document.body.classList.toggle('build');
     })
 
 
