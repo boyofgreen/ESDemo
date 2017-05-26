@@ -349,22 +349,36 @@ if (typeof Windows != 'undefined') {
 //
 ///brb code
 
-document.querySelector('.cancelbrb').addEventListener('click', function(){
-  document.querySelector('#modal').classList.toggle('hidden')
-})
+    document.querySelector('.cancelbrb').addEventListener('click', function(){
+      document.querySelector('#modal').classList.toggle('hidden')
+    })
 
 
-setTimeout(function(){
-var sendbuttons = document.querySelectorAll('.sendBuild');
+    setTimeout(function(){
+    var sendbuttons = document.querySelectorAll('.sendBuild');
 
-for(var i = 0; i < sendbuttons.length;i++){
-sendbuttons[i].addEventListener('click', function(){
-    document.querySelector('#modal').classList.toggle('hidden')
-})
+    for(var i = 0; i < sendbuttons.length;i++){
+     
+    sendbuttons[i].addEventListener('click', function(){
+      var g = Number(document.querySelector('#dataViewWrapper').getAttribute('data-datapos'))+1 ||1
+      console.log(g)
+     // console.log('#dataViews .dataArea:nth-child('+g+') .buildNumber')
+   document.getElementById('modalBuild').innerText = "release build: " + document.querySelector('#dataViews .dataArea:nth-child('+g+') .buildNumber').innerText
+   document.getElementById('chartViewer').innerText = document.querySelector('#dataViews .dataArea:nth-child('+g+') .releaseBox').innerText
 
-}
+        document.querySelector('#modal').classList.toggle('hidden');
 
-}, 2000)
+        setTimeout(function(){
+
+          document.getElementById('releaseStatus').innerHTML = "release device discovered </br> ready for release"
+        },1500)
+
+
+    })
+
+    }
+
+    }, 2000)
 //
 //
 //

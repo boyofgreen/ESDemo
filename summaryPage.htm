@@ -136,8 +136,21 @@
     <div id="modal" class="hidden">
       <div id="modalContent">
         <h2>Ready to release build?</h2>
-        <div class="brb"></div>
-        <p>don't control the big red button? <a href="#" class="cancelbrb">cancel</a></p>
+        <p id="modalBuild"></p>
+        <div id="chartViewer"></div>
+        <div class="brb" style="display:none"></div>
+        <div id="buildSelect"><p>release to ring:</p><p><select>
+<option value="Insider Fast">Insider Fast</option>
+<option value="Insider Slow">Insider Slow"</option>
+<option value="Canary">Canary</option>
+</select>
+</p>
+<div id="releaseStatus">
+  <p>looking for release device...</p>
+  <progress IsIndeterminate=true ></progress>
+
+</div>
+        <p>not ready to release? <a href="#" class="cancelbrb">cancel</a></p>
         
       </div>
     </div>

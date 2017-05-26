@@ -439,7 +439,7 @@ transform: translateX(-80%)
 #modalContent {
     background-color: #fefefe;
     border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+    width: 400px; /* Could be more or less, depending on screen size */
     display: flex;
     height: 400px;
     padding: 20px;
@@ -549,3 +549,34 @@ transform: translateX(-80%)
 .screenShots p {margin: 0}
 .screenShots{ width: 160px}
 .cLeft, .cRight {flex: 2}
+
+select {
+   width: 240px;
+   height: 44px;
+   overflow: hidden;
+   background: url(new_arrow.png) no-repeat right #ddd;
+   border: 1px solid #ccc;
+   color: #222;
+   padding: 2px;
+   font-size: 1.5em;
+   }
+
+   #releaseStatus {
+     padding: 30px;
+     border: 1px solid #aaa;
+     margin: 5px;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     width: 100%;
+     text-align: center;
+   }
+   #releaseStatus p {
+     margin: 0;
+     padding: 0;
+   }
+   #buildSelect { display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center}
