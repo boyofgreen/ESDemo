@@ -18,9 +18,7 @@ if (typeof Windows != 'undefined') {
 
 
 
-    // Add our own item to respond to
-    // var mi = Windows.UI.Input.RadialControllerMenuItem.createFromKnownIcon("Undo/Redo", Windows.UI.Input.RadialControllerMenuKnownIcon.undoRedo);
-    // mi.addEventListener("invoked", modeSwitch);
+
 
     // Add two custom sections for the dial interface
     // If images do not show on Dial, change path to be absolute
