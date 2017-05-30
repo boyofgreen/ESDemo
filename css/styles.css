@@ -589,8 +589,8 @@ select {
 
     #animate {
       position: absolute;
-      transform: translateX(-600px);
-      top: 400px;
+      transform: translateX(-700px);
+      top: 270px;
       transition-property:transform;
       left: 0;
     }
