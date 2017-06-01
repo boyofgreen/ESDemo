@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 //This is the "Offline copy of pages" wervice worker
 
 //Install stage sets up the index page (home page) in the cahche and opens a new cache
@@ -40,3 +41,5 @@ self.addEventListener('fetch', function(event) {
       });
     })
   );
+=======
+>>>>>>> 17aa763725aa64402bc19beaeea055db6c76850f
