@@ -29,7 +29,6 @@ var chartOverTime = document.getElementById('chartOverTime');
         };
 
         window.onload = function() {
-			setTimeout(function(){
             var ctx = chartOverTime.getContext("2d");
             window.myBar = new Chart(ctx, {
                 type: 'bar',
@@ -45,7 +44,7 @@ var chartOverTime = document.getElementById('chartOverTime');
                     }
                 }
             });
-}, 800)
+
         };
 
 
@@ -88,10 +87,10 @@ var chartDeploys = document.getElementById('chartDeploys')
 
      
 
-setTimeout(function(){
+
       var ctx = chartDeploys.getContext('2d');
              window.chartDeplysChart =   new Chart(ctx, deploysData);
-}, 2300)
+
 
     var chartScore = document.getElementById('chartScore');
 
@@ -116,12 +115,12 @@ setTimeout(function(){
             }]
 
         };
-		setTimeout(function(){
+
               var scoreCtx = chartScore.getContext('2d');
              window.chartScoreChart =   new Chart(scoreCtx, { type: 'horizontalBar',
                 data:chartScoreData});
 
-}, 2500)
+
             
 		//var presets = window.chartColors;
 		//var utils = Samples.utils;
@@ -226,8 +225,6 @@ setTimeout(function(){
 				}
 			}
 		};
-
-		setTimeout(function(){
 var chartBrRating = document.getElementById('chartBrRating')
 		var chartBrRatingChart = new Chart(chartBrRating, {
 			type: 'line',
@@ -235,4 +232,3 @@ var chartBrRating = document.getElementById('chartBrRating')
 			options: optionsbr
 		});
 
-}, 2300)

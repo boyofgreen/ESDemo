@@ -10,7 +10,7 @@ var jsonFiles = new Array(); //["./data/17522_fbl_impressive.json", "./data/1752
 
 document.addEventListener("DOMContentLoaded", function(){
 
-setTimeout(function(){
+
 
   for(i = 0; i < fileNames.length; i++){
     jsonFiles.push(dataLocation + fileNames[i] + dataType);
@@ -52,7 +52,7 @@ setTimeout(function(){
     searchView = false;
     detailedView = false;
   }
-},1400);
+
 });
 
 // Identify which JSON files contain the data we are looking for!
