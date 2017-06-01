@@ -1,6 +1,6 @@
 // File: autocomplete.js
 // This file provides autocomplete functionality for the search box
-'use strict';
+//'use strict';
 
 var autoCompleteTerms = new Array();
 var searchBoxName = "searchField";

@@ -34,7 +34,7 @@ var chartOverTime = document.getElementById('chartOverTime');
                 type: 'bar',
                 data: barChartData,
                 options: {
-                    responsive: false,
+                    responsive: true,
                     legend: {
                         position: 'top',
                     },
@@ -203,7 +203,8 @@ var chartDeploys = document.getElementById('chartDeploys')
 		};
 
 		var optionsbr = {
-			maintainAspectRatio: false,
+			maintainAspectRatio: true,
+			responsive: true,
 			spanGaps: false,
 			elements: {
 				line: {

@@ -384,17 +384,17 @@ transform: translateX(-80%)
 }
 
 #activityFeed {
-  height: 400px;
+  height: 800px;
   overflow: hidden;
-  min-width: 300px;
+  width: 600px;
   /*border: solid 1px red;*/
-  float: left;
+  xfloat: left;
   margin: 20px;
 }
 
 @keyframes activityAnimation {
   0% {height:1px;}
-  100% {height:40px;}
+  100% {height:200px;}
 }
 
 .activity {
@@ -402,7 +402,8 @@ transform: translateX(-80%)
   font-size:small;
   display: flex;
   flex-direction:column ;
-  height: 40px;
+  height: 200px;
+  overflow:hidden;
   /*border: solid 1px red;*/
   animation-name: activityAnimation;
   animation-duration: .3s;
@@ -487,7 +488,9 @@ transform: translateX(-80%)
   min-width:320px;
   margin-top:0;
 
+
 }
+#savedItems .dataArea
 #savedItems{
  display: flex;
  flex-direction: column;  
@@ -497,7 +500,14 @@ transform: translateX(-80%)
  
 
 }
-#content #currentRings { width: 720px;}
+#content #currentRings { 
+  max-width: 720px;
+    xheight:550px;
+    width: 100%;
+  xoverflow:hidden;
+  display: flex;
+  flex-direction: column;
+  }
 
 .btn { margin: 20px auto}
 
@@ -610,4 +620,9 @@ select {
       transform: translate(125px, 55px);
       position: relative;
       z-index: 100;
+    }
+
+
+    .activity .image img{
+      width: 100px;
     }
