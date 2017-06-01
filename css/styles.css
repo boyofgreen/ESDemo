@@ -384,11 +384,11 @@ transform: translateX(-80%)
 }
 
 #activityFeed {
-  height: 400px;
+  height: 800px;
   overflow: hidden;
-  min-width: 300px;
+  width: 600px;
   /*border: solid 1px red;*/
-  float: left;
+  xfloat: left;
   margin: 20px;
 }
 
@@ -402,7 +402,8 @@ transform: translateX(-80%)
   font-size:small;
   display: flex;
   flex-direction:column ;
-  height: 40px;
+  height: 200px;
+  overflow:hidden;
   /*border: solid 1px red;*/
   animation-name: activityAnimation;
   animation-duration: .3s;
@@ -610,4 +611,9 @@ select {
       transform: translate(125px, 55px);
       position: relative;
       z-index: 100;
+    }
+
+
+    .activity .image img{
+      width: 100px;
     }

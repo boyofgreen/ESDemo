@@ -4,600 +4,99 @@
     "dev": "Byers Solomon",
     "branch": "FBL_CHICAGO",
     "locRemoved": 687,
-    "locAdded": 546
+    "locAdded": 546,
+    "feature":"emoji from your pinned contacts",
+    "dis":"When you receive emoji from your pinned contacts you can now watch them appear and animate right from the taskbar! Have one of your pinned contacts send you",
+    "img":"/data/my-people-emoji-flyout.png"
   },
   {
     "dev": "Pearson Mccarthy",
     "branch": "FBL_CHICAGO",
     "locRemoved": 977,
-    "locAdded": 242
+    "locAdded": 242,
+        "feature":"Notification Badging",
+    "dis":"You now have two easy ways to share with your people in Windows 10! Drag-and-drop files directly onto the contacts ",
+    "img":"/data/my-people-badging.png"
   },
   {
     "dev": "Sharpe Hays",
     "branch": "FBL_CHICAGO",
     "locRemoved": 842,
-    "locAdded": 1561
+    "locAdded": 1561,
+        "feature":"integrated with System Health",
+    "dis":"The About Settings page has been simplified to be accessible to all customers. In addition to the overall UX cleanup, we have also added a health sectio",
+    "img":"/data/settings-system-health-about.png"
   },
   {
     "dev": "Good Frank",
     "branch": "FBL_PUSH_THE_BUTTON",
     "locRemoved": 725,
-    "locAdded": 1175
+    "locAdded": 1175,
+        "feature":"Tips and Videos in Settings",
+    "dis":"To help you learn more about your options, we’re starting to add tips and videos to Settings. We’re still growing our collection, but to start with you can find them in under Settings > Ease of Access or Settings > Update & security, a handful ",
+    "img":"/data/settings-tips-videos.png"
   },
   {
     "dev": "Ladonna Armstrong",
     "branch": "FBL_NINJACAT",
     "locRemoved": 786,
-    "locAdded": 1649
+    "locAdded": 1649,
+        "feature":"Incoming call notifications",
+    "dis":"For our Insiders with Android phones, Cortana can now display cross device incoming call notifications! Install the Cortana app on your phone, go to “Settings” > “Sync notifications ",
+    "img":"/data/call-notif.png"
   },
   {
     "dev": "Minnie Rodriquez",
     "branch": "FBL_NINJACAT",
     "locRemoved": 552,
-    "locAdded": 94
+    "locAdded": 94,
+        "feature":"Tell your story your way",
+    "dis":"Windows 10 Creators Update and the Windows 10 Fall Creators Update. Story Remix is an evolution of the Photos app  ",
+    "img":"/data/08_storyeditor_new.png"
   },
   {
     "dev": "Letha Rowe",
     "branch": "FBL_CHICAGO",
     "locRemoved": 593,
-    "locAdded": 1005
+    "locAdded": 1005,
+        "feature":"Videos made easy",
+    "dis":"Story Remix uses its understanding of your content to find collections of content most relevant to you and automatically brings it together into video stories – each with a soundtrack, theme, and transitions. You can keep these suggested video ",
+    "img":"/data/03_search_new.png"
   },
   {
     "dev": "Ramsey Acosta",
     "branch": "FBL_PUSH_THE_BUTTON",
     "locRemoved": 800,
-    "locAdded": 1110
+    "locAdded": 1110,
+        "feature":"Power Throttling Update",
+    "dis":"Starting with Build 16193, the Task Manager column name has changed from “Background Moderated” to “Power Throttling”. For more information on Power Throttling ",
+    "img":"/data/power-throttling-task-man.png"
   },
   {
     "dev": "Strickland Serrano",
     "branch": "FBL_CHICAGO",
     "locRemoved": 596,
-    "locAdded": 1714
+    "locAdded": 1714,
+        "feature":"controlling the volume of your UWP apps",
+    "dis":"Volume Mixer to now include UWP apps (like Microsoft Edge, or Groove Music), so you can set their volume without impacting the overall system volume. Appreciate everyone who’s shared feedback requesting this, let  ",
+    "img":"/data/mixer.png"
   },
   {
     "dev": "Marcie Vazquez",
     "branch": "FBL_CHICAGO",
     "locRemoved": 513,
-    "locAdded": 1886
+    "locAdded": 1886,
+        "feature":"My People",
+    "dis":"Technology is all about making it easier for you to connect with your most important people. Whether you want to share a photo, make plans for dinner, or get an answer from a friend or  ",
+    "img":"/data/my-people.png"
   },
   {
     "dev": "Nicholson Knowles",
     "branch": "FBL_PUSH_THE_BUTTON",
     "locRemoved": 51,
-    "locAdded": 715
-  },
-  {
-    "dev": "French Stewart",
-    "branch": "FBL_CHICAGO",
-    "locRemoved": 75,
-    "locAdded": 822
-  },
-  {
-    "dev": "Chelsea Rojas",
-    "branch": "FBL_PUSH_THE_BUTTON",
-    "locRemoved": 43,
-    "locAdded": 2046
-  },
-  {
-    "dev": "Hale Wilkerson",
-    "branch": "FBL_PUSH_THE_BUTTON",
-    "locRemoved": 361,
-    "locAdded": 162
-  },
-  {
-    "dev": "Jacobson Roman",
-    "branch": "FBL_NINJACAT",
-    "locRemoved": 476,
-    "locAdded": 651
-  },
-  {
-    "dev": "Bentley Berger",
-    "branch": "FBL_PUSH_THE_BUTTON",
-    "locRemoved": 798,
-    "locAdded": 417
-  },
-  {
-    "dev": "Bauer Miles",
-    "branch": "FBL_NARWHAL",
-    "locRemoved": 240,
-    "locAdded": 1412
-  },
-  {
-    "dev": "Lynette Reed",
-    "branch": "FBL_NARWHAL",
-    "locRemoved": 301,
-    "locAdded": 1626
-  },
-  {
-    "dev": "Carrie Webster",
-    "branch": "FBL_NINJACAT",
-    "locRemoved": 338,
-    "locAdded": 1589
-  },
-  {
-    "dev": "Bridges Lynn",
-    "branch": "FBL_NARWHAL",
-    "locRemoved": 610,
-    "locAdded": 1023
-  },
-  {
-    "dev": "Francisca Griffin",
-    "branch": "FBL_PUSH_THE_BUTTON",
-    "locRemoved": 994,
-    "locAdded": 1410
-  },
-  {
-    "dev": "Fischer Richmond",
-    "branch": "FBL_NARWHAL",
-    "locRemoved": 967,
-    "locAdded": 759
-  },
-  {
-    "dev": "Buckley Cain",
-    "branch": "FBL_NINJACAT",
-    "locRemoved": 156,
-    "locAdded": 728
-  },
-  {
-    "dev": "Merritt Mckay",
-    "branch": "FBL_CHICAGO",
-    "locRemoved": 407,
-    "locAdded": 280
-  },
-  {
-    "dev": "Rogers Gardner",
-    "branch": "FBL_PUSH_THE_BUTTON",
-    "locRemoved": 423,
-    "locAdded": 2031
-  },
-  {
-    "dev": "Parsons Aguirre",
-    "branch": "FBL_NARWHAL",
-    "locRemoved": 777,
-    "locAdded": 744
-  },
-  {
-    "dev": "Eleanor Moss",
-    "branch": "FBL_CHICAGO",
-    "locRemoved": 263,
-    "locAdded": 1419
-  },
-  {
-    "dev": "Ines Salazar",
-    "branch": "FBL_NINJACAT",
-    "locRemoved": 738,
-    "locAdded": 1693
-  },
-  {
-    "dev": "Lilian Camacho",
-    "branch": "FBL_CHICAGO",
-    "locRemoved": 443,
-    "locAdded": 1696
-  },
-  {
-    "dev": "Glenn Hamilton",
-    "branch": "FBL_NARWHAL",
-    "locRemoved": 697,
-    "locAdded": 902
-  },
-  {
-    "dev": "Hays Rivera",
-    "branch": "FBL_CHICAGO",
-    "locRemoved": 802,
-    "locAdded": 1358
-  },
-  {
-    "dev": "Luz Hanson",
-    "branch": "FBL_NARWHAL",
-    "locRemoved": 257,
-    "locAdded": 948
-  },
-  {
-    "dev": "Ruby Lucas",
-    "branch": "FBL_NARWHAL",
-    "locRemoved": 512,
-    "locAdded": 603
-  },
-  {
-    "dev": "Winifred Conner",
-    "branch": "FBL_PUSH_THE_BUTTON",
-    "locRemoved": 830,
-    "locAdded": 1034
-  },
-  {
-    "dev": "Shaw Farley",
-    "branch": "FBL_NARWHAL",
-    "locRemoved": 570,
-    "locAdded": 414
-  },
-  {
-    "dev": "Madge Conrad",
-    "branch": "FBL_CHICAGO",
-    "locRemoved": 109,
-    "locAdded": 1431
-  },
-  {
-    "dev": "Roth Donovan",
-    "branch": "FBL_CHICAGO",
-    "locRemoved": 137,
-    "locAdded": 537
-  },
-  {
-    "dev": "Addie Ortiz",
-    "branch": "FBL_CHICAGO",
-    "locRemoved": 911,
-    "locAdded": 1250
-  },
-  {
-    "dev": "Terra Edwards",
-    "branch": "FBL_PUSH_THE_BUTTON",
-    "locRemoved": 407,
-    "locAdded": 509
-  },
-  {
-    "dev": "Curry Norris",
-    "branch": "FBL_CHICAGO",
-    "locRemoved": 723,
-    "locAdded": 179
-  },
-  {
-    "dev": "Davis Dale",
-    "branch": "FBL_PUSH_THE_BUTTON",
-    "locRemoved": 142,
-    "locAdded": 186
-  },
-  {
-    "dev": "Tara Silva",
-    "branch": "FBL_PUSH_THE_BUTTON",
-    "locRemoved": 668,
-    "locAdded": 777
-  },
-  {
-    "dev": "Tracie Miranda",
-    "branch": "FBL_CHICAGO",
-    "locRemoved": 272,
-    "locAdded": 444
-  },
-  {
-    "dev": "Dawn Holden",
-    "branch": "FBL_CHICAGO",
-    "locRemoved": 978,
-    "locAdded": 409
-  },
-  {
-    "dev": "Dunlap Singleton",
-    "branch": "FBL_NINJACAT",
-    "locRemoved": 984,
-    "locAdded": 434
-  },
-  {
-    "dev": "Luann Harmon",
-    "branch": "FBL_CHICAGO",
-    "locRemoved": 175,
-    "locAdded": 278
-  },
-  {
-    "dev": "Susanne Garner",
-    "branch": "FBL_NARWHAL",
-    "locRemoved": 187,
-    "locAdded": 1412
-  },
-  {
-    "dev": "Booth Underwood",
-    "branch": "FBL_NINJACAT",
-    "locRemoved": 642,
-    "locAdded": 1301
-  },
-  {
-    "dev": "Dorsey Pruitt",
-    "branch": "FBL_NARWHAL",
-    "locRemoved": 435,
-    "locAdded": 615
-  },
-  {
-    "dev": "Farley Andrews",
-    "branch": "FBL_CHICAGO",
-    "locRemoved": 824,
-    "locAdded": 825
-  },
-  {
-    "dev": "Jamie Gray",
-    "branch": "FBL_PUSH_THE_BUTTON",
-    "locRemoved": 894,
-    "locAdded": 1338
-  },
-  {
-    "dev": "Munoz Gilliam",
-    "branch": "FBL_NINJACAT",
-    "locRemoved": 598,
-    "locAdded": 1219
-  },
-  {
-    "dev": "Natalia Nolan",
-    "branch": "FBL_NINJACAT",
-    "locRemoved": 390,
-    "locAdded": 707
-  },
-  {
-    "dev": "Horton Soto",
-    "branch": "FBL_NARWHAL",
-    "locRemoved": 891,
-    "locAdded": 642
-  },
-  {
-    "dev": "Carter Watts",
-    "branch": "FBL_CHICAGO",
-    "locRemoved": 177,
-    "locAdded": 1940
-  },
-  {
-    "dev": "Kendra Harper",
-    "branch": "FBL_NINJACAT",
-    "locRemoved": 1017,
-    "locAdded": 1482
-  },
-  {
-    "dev": "Traci Perkins",
-    "branch": "FBL_CHICAGO",
-    "locRemoved": 688,
-    "locAdded": 1940
-  },
-  {
-    "dev": "Holland Bradford",
-    "branch": "FBL_CHICAGO",
-    "locRemoved": 98,
-    "locAdded": 788
-  },
-  {
-    "dev": "Doreen Hardin",
-    "branch": "FBL_CHICAGO",
-    "locRemoved": 63,
-    "locAdded": 1914
-  },
-  {
-    "dev": "Rosario Duffy",
-    "branch": "FBL_NINJACAT",
-    "locRemoved": 377,
-    "locAdded": 1221
-  },
-  {
-    "dev": "Tillman Guzman",
-    "branch": "FBL_CHICAGO",
-    "locRemoved": 879,
-    "locAdded": 68
-  },
-  {
-    "dev": "Robin Todd",
-    "branch": "FBL_NARWHAL",
-    "locRemoved": 561,
-    "locAdded": 474
-  },
-  {
-    "dev": "Jacqueline Barr",
-    "branch": "FBL_PUSH_THE_BUTTON",
-    "locRemoved": 957,
-    "locAdded": 109
-  },
-  {
-    "dev": "Maritza Gallagher",
-    "branch": "FBL_NINJACAT",
-    "locRemoved": 276,
-    "locAdded": 1135
-  },
-  {
-    "dev": "Lucas Taylor",
-    "branch": "FBL_CHICAGO",
-    "locRemoved": 404,
-    "locAdded": 1180
-  },
-  {
-    "dev": "Jensen Vargas",
-    "branch": "FBL_CHICAGO",
-    "locRemoved": 548,
-    "locAdded": 2020
-  },
-  {
-    "dev": "Kara Melton",
-    "branch": "FBL_NINJACAT",
-    "locRemoved": 839,
-    "locAdded": 926
-  },
-  {
-    "dev": "Byrd Nieves",
-    "branch": "FBL_NINJACAT",
-    "locRemoved": 735,
-    "locAdded": 267
-  },
-  {
-    "dev": "Suzanne Aguilar",
-    "branch": "FBL_PUSH_THE_BUTTON",
-    "locRemoved": 176,
-    "locAdded": 1583
-  },
-  {
-    "dev": "Miles Garrison",
-    "branch": "FBL_CHICAGO",
-    "locRemoved": 926,
-    "locAdded": 1046
-  },
-  {
-    "dev": "Latisha Walton",
-    "branch": "FBL_NINJACAT",
-    "locRemoved": 841,
-    "locAdded": 332
-  },
-  {
-    "dev": "Natasha Drake",
-    "branch": "FBL_NINJACAT",
-    "locRemoved": 884,
-    "locAdded": 416
-  },
-  {
-    "dev": "Foley Hayes",
-    "branch": "FBL_NARWHAL",
-    "locRemoved": 647,
-    "locAdded": 547
-  },
-  {
-    "dev": "Bonita Shannon",
-    "branch": "FBL_NARWHAL",
-    "locRemoved": 984,
-    "locAdded": 1304
-  },
-  {
-    "dev": "Brown Stevenson",
-    "branch": "FBL_NINJACAT",
-    "locRemoved": 425,
-    "locAdded": 1745
-  },
-  {
-    "dev": "Nikki Stanton",
-    "branch": "FBL_NINJACAT",
-    "locRemoved": 543,
-    "locAdded": 142
-  },
-  {
-    "dev": "Imelda Hicks",
-    "branch": "FBL_PUSH_THE_BUTTON",
-    "locRemoved": 279,
-    "locAdded": 749
-  },
-  {
-    "dev": "Eaton Rivas",
-    "branch": "FBL_NARWHAL",
-    "locRemoved": 194,
-    "locAdded": 1142
-  },
-  {
-    "dev": "Florence Kim",
-    "branch": "FBL_NARWHAL",
-    "locRemoved": 846,
-    "locAdded": 1331
-  },
-  {
-    "dev": "Darcy Jordan",
-    "branch": "FBL_NARWHAL",
-    "locRemoved": 323,
-    "locAdded": 784
-  },
-  {
-    "dev": "Geraldine Davidson",
-    "branch": "FBL_NARWHAL",
-    "locRemoved": 673,
-    "locAdded": 1132
-  },
-  {
-    "dev": "Erin Doyle",
-    "branch": "FBL_CHICAGO",
-    "locRemoved": 455,
-    "locAdded": 2012
-  },
-  {
-    "dev": "Burnett Pittman",
-    "branch": "FBL_PUSH_THE_BUTTON",
-    "locRemoved": 837,
-    "locAdded": 1710
-  },
-  {
-    "dev": "Etta Petersen",
-    "branch": "FBL_NARWHAL",
-    "locRemoved": 838,
-    "locAdded": 174
-  },
-  {
-    "dev": "Stacy Nunez",
-    "branch": "FBL_NINJACAT",
-    "locRemoved": 805,
-    "locAdded": 1197
-  },
-  {
-    "dev": "Castillo Gillespie",
-    "branch": "FBL_NINJACAT",
-    "locRemoved": 192,
-    "locAdded": 104
-  },
-  {
-    "dev": "Howell Snow",
-    "branch": "FBL_CHICAGO",
-    "locRemoved": 997,
-    "locAdded": 1467
-  },
-  {
-    "dev": "Cohen Shepard",
-    "branch": "FBL_CHICAGO",
-    "locRemoved": 609,
-    "locAdded": 855
-  },
-  {
-    "dev": "Nguyen Vasquez",
-    "branch": "FBL_NARWHAL",
-    "locRemoved": 843,
-    "locAdded": 521
-  },
-  {
-    "dev": "Sofia Bowman",
-    "branch": "FBL_PUSH_THE_BUTTON",
-    "locRemoved": 954,
-    "locAdded": 923
-  },
-  {
-    "dev": "Kirk Mejia",
-    "branch": "FBL_NINJACAT",
-    "locRemoved": 940,
-    "locAdded": 1163
-  },
-  {
-    "dev": "Felecia Bray",
-    "branch": "FBL_NINJACAT",
-    "locRemoved": 443,
-    "locAdded": 1509
-  },
-  {
-    "dev": "Ramos Rutledge",
-    "branch": "FBL_PUSH_THE_BUTTON",
-    "locRemoved": 967,
-    "locAdded": 661
-  },
-  {
-    "dev": "Chavez Owens",
-    "branch": "FBL_NINJACAT",
-    "locRemoved": 304,
-    "locAdded": 2024
-  },
-  {
-    "dev": "Albert Tillman",
-    "branch": "FBL_CHICAGO",
-    "locRemoved": 373,
-    "locAdded": 1426
-  },
-  {
-    "dev": "Vang Mcclure",
-    "branch": "FBL_CHICAGO",
-    "locRemoved": 952,
-    "locAdded": 1098
-  },
-  {
-    "dev": "Buchanan Crane",
-    "branch": "FBL_CHICAGO",
-    "locRemoved": 109,
-    "locAdded": 1828
-  },
-  {
-    "dev": "Lawson Conley",
-    "branch": "FBL_NARWHAL",
-    "locRemoved": 646,
-    "locAdded": 673
-  },
-  {
-    "dev": "Mavis Pugh",
-    "branch": "FBL_NARWHAL",
-    "locRemoved": 833,
-    "locAdded": 1570
-  },
-  {
-    "dev": "Ellis Berg",
-    "branch": "FBL_CHICAGO",
-    "locRemoved": 447,
-    "locAdded": 358
+    "locAdded": 715,
+        "feature":" Gmail accounts in Windows 10 Mail ",
+    "dis":" we announced we’re introducing a new experience for Gmail accounts in the Windows 10 Mail and Calendar apps that brings our latest features such as Focused Inbox and richer experiences for travel reservations and package deliveries that were previously ",
+    "img":"/data/2-Gmail-blog-inline1.png"
   }]
 }
