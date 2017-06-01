@@ -86,10 +86,10 @@
                 var canvas = document.createElement('canvas');
                 div.appendChild(canvas);
                 container.appendChild(div);
-
+               
                 var ctx = canvas.getContext('2d');
                 var config = createConfig(details.gridLines, details.title);
-             
+            
             });
         };
 
@@ -97,9 +97,9 @@
         var makeCharts = function(ctx, dataset){
 
             var config = createConfig(dataset)
-
+ setTimeout(function(){
         new Chart(ctx, config);
 
-
+ }, 2500)
         }
 
