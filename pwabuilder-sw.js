@@ -1,3 +1,4 @@
+
 var CACHE = 'pwabuilder-precache';
 
 var precacheFiles = [
